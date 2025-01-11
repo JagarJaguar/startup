@@ -41,10 +41,10 @@ sequenceDiagram
 
 - Secure Login via HTTPS (basic user authentication)
 - Ability to send messages
+    - Chat history is logged and saved
 - Users able to view other users sent messages
 - Ability to use emojis in messages
 - Ability to delete own messages
-- Chat history is logged and saved
 
 ### Technologies
 
