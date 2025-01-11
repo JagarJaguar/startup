@@ -22,13 +22,19 @@ Are you sick of not being able to message your friends on the fly? Wondering whe
 
 ![Design image](mockupDesign.jpeg)
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+Here is a sequence diagram that shows how users would interact with the backend to send messages.
 
 ```mermaid
 sequenceDiagram
-    actor You
-    actor Website
-    You->>Website: Replace this with your design
+    actor Rob
+    actor Bill
+    actor Paul
+    Rob->>Website: Send Message
+    Bill->>Website: Send Message
+    Paul->>Website: Send Message
+    Website-->>Rob: View messages
+    Website-->>Bill: View Messages
+    Website-->>Paul: View Messages
 ```
 
 ### Key features
