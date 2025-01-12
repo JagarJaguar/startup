@@ -57,7 +57,7 @@ I am going to use the required technologies in the following ways.
     - login
     - sending messages
     - viewing messages
-    - use EmojiHub to have emoji selections [EmojiHub](https://github.com/cheatsnake/emojihub)
+    - use [EmojiHub](https://github.com/cheatsnake/emojihub) to have emoji selections
 - **DB/Login** - Stores users sent messages in database. Register and login users. User credentials stored in a secure database. Users cannot send messages until they have signed in.
 - **WebSocket** - As users send messages, other users on the website can view their messages in real-time.
 
