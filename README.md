@@ -11,7 +11,7 @@ For this deliverable I did the following. I checked the box `[x]` and added a de
 - [ ] Proper use of Markdown
 - [x] A concise and compelling elevator pitch
 - [x] Description of key features
-- [ ] Description of how you will use each technology
+- [x] Description of how you will use each technology
 - [x] One or more rough sketches of your application. Images must be embedded in this file using Markdown image references.
 
 ### Elevator pitch
@@ -41,7 +41,7 @@ sequenceDiagram
 
 - Secure Login via HTTPS (basic user authentication)
 - Ability to send messages
-    - Chat history is logged and saved
+    - Chat history is saved
 - Users able to view other users sent messages
 - Ability to use emojis in messages
 - Ability to delete own messages
@@ -50,12 +50,16 @@ sequenceDiagram
 
 I am going to use the required technologies in the following ways.
 
-- **HTML** - Description here
-- **CSS** - Description here
-- **React** - Description here
-- **Service** - Description here
-- **DB/Login** - Description here
-- **WebSocket** - Description here
+- **HTML** - Uses correct HTML structure to layout website. There will be 3 HTML pages: One for login, one for chatting, and one for an about page.
+- **CSS** - Uses good contrasting colors, will work accross different devices and aspect ratios. Ueses correct whitespace that looks neat and is easy to read.
+- **React** - Provides login functionality, message display, sending messages, emoji selection, page selection, and the use of React for routing and other needed components.
+- **Service** - Backend service with endpoints for:
+    - login
+    - sending messages
+    - viewing messages
+    - use EmojiHub to have emoji selections [EmojiHub](https://github.com/cheatsnake/emojihub)
+- **DB/Login** - Stores users sent messages in database. Register and login users. User credentials stored in a secure database. Users cannot send messages until they have signed in.
+- **WebSocket** - As users send messages, other users on the website can view their messages in real-time.
 
 ## 🚀 AWS deliverable
 
