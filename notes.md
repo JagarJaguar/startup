@@ -18,7 +18,10 @@ While working on the startup deliverable, I had to think about how I wanted to d
 
 ## AWS Notes
 
-*change later*
+Going to start using bulletpoints to make things easier since it is a lot to cover by typing sentences.
+- Made AWS Instance using t3.micro, may change later to allocate more power.
+- Associated an elastic IP to my instance in AWS.
+- Website works using HTTP!
 
 ## HTML Notes
 
