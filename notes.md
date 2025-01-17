@@ -27,6 +27,7 @@ Going to start using bulletpoints to make things easier since it is a lot to cov
 - Setup DNS records
 - My domain and subdomain work, but my firewall blocks the domain because it isn't secure. Waiting to secure it with HTTPS.
 - One thing that I found interesting was the handshakes between the client and the server with TLS. There is quite a process involved for a secure connection, which makes sense.
+- Secured my website by modifying Caddy to request a certificate. All 3 of the domains work. simon, startup, and the root domain.
 
 ## HTML Notes
 
