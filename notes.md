@@ -26,6 +26,7 @@ Going to start using bulletpoints to make things easier since it is a lot to cov
 - Registered my new domain (jagarchat.com)
 - Setup DNS records
 - My domain and subdomain work, but my firewall blocks the domain because it isn't secure. Waiting to secure it with HTTPS.
+- One thing that I found interesting was the handshakes between the client and the server with TLS. There is quite a process involved for a secure connection, which makes sense.
 
 ## HTML Notes
 
