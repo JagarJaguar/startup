@@ -18,10 +18,11 @@ While working on the startup deliverable, I had to think about how I wanted to d
 
 ## AWS Notes
 
-Going to start using bulletpoints to make things easier since it is a lot to cover by typing sentences.
+Going to start using bulletpoints to make things easier since it is a lot to cover by typing sentences and paragraphs.
 - Made AWS Instance using t3.micro, may change later to allocate more power.
 - Associated an elastic IP to my instance in AWS.
 - Website works using HTTP!
+- Learned about DNS, what it stands for and how they connect a domain to an IP. As well as multiple domains to 1 IP using a CNAME map.
 
 ## HTML Notes
 
