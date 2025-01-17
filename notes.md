@@ -25,6 +25,7 @@ Going to start using bulletpoints to make things easier since it is a lot to cov
 - Learned about DNS, what it stands for and how they connect a domain to an IP. As well as multiple domains to 1 IP using a CNAME map.
 - Registered my new domain (jagarchat.com)
 - Setup DNS records
+- My domain and subdomain work, but my firewall blocks the domain because it isn't secure. Waiting to secure it with HTTPS.
 
 ## HTML Notes
 
