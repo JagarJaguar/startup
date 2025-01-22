@@ -31,4 +31,6 @@ Going to start using bulletpoints to make things easier since it is a lot to cov
 
 ## HTML Notes
 
-*change later*
+- There is a lot of different content with HTML. Each page of website needs to utilize correct structure of HTML.
+- Block elements are used to emphasize something and break the flow, whereas something like a paragraph element would have a `span` to mark sub text.
+- Webpages need to have `<!DOCTYPE html>` at the very top of the HTML file.
