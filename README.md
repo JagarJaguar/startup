@@ -71,12 +71,12 @@ For this deliverable I did the following. I checked the box `[x]` and added a de
 
 For this deliverable I did the following. I checked the box `[x]` and added a description for things I completed.
 
-- [] **HTML pages** - I did not complete this part of the deliverable.
+- [ ] **HTML pages** - I did not complete this part of the deliverable.
 - [ ] **Proper HTML element usage** - I did not complete this part of the deliverable.
 - [x] **Links** - Added links for all 3 pages. All pages link to each other.
-- [ ] **Text** - I did not complete this part of the deliverable.
-- [ ] **3rd party API placeholder** - I did not complete this part of the deliverable.
-- [ ] **Images** - I did not complete this part of the deliverable.
+- [x] **Text** - About page has text.
+- [x] **3rd party API placeholder** - About page has placeholder for a 3rd party emojicon API.
+- [x] **Images** - Added an image to the about page. Gives an insight into the author and what they like. 
 - [x] **Login placeholder** - 2 forms for login on index.html, one for the username, and one for the password.
 - [ ] **DB data placeholder** - I did not complete this part of the deliverable.
 - [ ] **WebSocket placeholder** - I did not complete this part of the deliverable.
