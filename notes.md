@@ -37,3 +37,4 @@ Going to start using bulletpoints to make things easier since it is a lot to cov
 - Did all of the CodePen demos successfully. Refer back to those for formatting if needed. 
 - Cloned simon-html repo. Look through the code for references for own site.
 - Deployed the Simon HTML to my [websites](https://simon.jagarchat.com/) subdomain (simon).
+- Got the base web pages down and added the header to every website page
