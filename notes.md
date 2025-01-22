@@ -35,3 +35,4 @@ Going to start using bulletpoints to make things easier since it is a lot to cov
 - Block elements are used to emphasize something and break the flow, whereas something like a paragraph element would have a `span` to mark sub text.
 - Webpages need to have `<!DOCTYPE html>` at the very top of the HTML file.
 - Did all of the CodePen demos successfully. Refer back to those for formatting if needed. 
+- Cloned simon-html repo. Look through the code for references for own site.
