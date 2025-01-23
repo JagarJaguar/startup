@@ -71,7 +71,7 @@ For this deliverable I did the following. I checked the box `[x]` and added a de
 
 For this deliverable I did the following. I checked the box `[x]` and added a description for things I completed.
 
-- [ ] **HTML pages** - I did not complete this part of the deliverable.
+- [x] **HTML pages** - 3 different pages: `index.html`, `chat.html`, and `about.html`
 - [ ] **Proper HTML element usage** - I did not complete this part of the deliverable.
 - [x] **Links** - Added links for all 3 pages. All pages link to each other.
 - [x] **Text** - About page has text.
