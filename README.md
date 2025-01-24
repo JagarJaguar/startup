@@ -75,7 +75,7 @@ For this deliverable I did the following. I checked the box `[x]` and added a de
 - [ ] **Proper HTML element usage** - I did not complete this part of the deliverable.
 - [x] **Links** - Added links for all 3 pages. All pages link to each other.
 - [x] **Text** - About page has text.
-- [x] **3rd party API placeholder** - About page has placeholder for a 3rd party emojicon API.
+- [x] **3rd party API placeholder** - About page has placeholder for a 3rd party emojicon API (will also be used for emoji selection for the actual chat if the websocket doesn't have a selection).
 - [x] **Images** - Added an image to the about page. Gives an insight into the author and what they like. 
 - [x] **Login placeholder** - 2 forms for login on `index.html`, one for the username, and one for the password.
 - [x] **DB data placeholder** - Message history stored in the textarea placeholder in `chat.html`.
