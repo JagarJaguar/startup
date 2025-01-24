@@ -71,15 +71,15 @@ For this deliverable I did the following. I checked the box `[x]` and added a de
 
 For this deliverable I did the following. I checked the box `[x]` and added a description for things I completed.
 
-- [x] **HTML pages** - 3 different pages: `index.html`, `chat.html`, and `about.html`
+- [x] **HTML pages** - 3 different pages for website functionality: `index.html`, `chat.html`, and `about.html`
 - [ ] **Proper HTML element usage** - I did not complete this part of the deliverable.
 - [x] **Links** - Added links for all 3 pages. All pages link to each other.
 - [x] **Text** - About page has text.
 - [x] **3rd party API placeholder** - About page has placeholder for a 3rd party emojicon API.
 - [x] **Images** - Added an image to the about page. Gives an insight into the author and what they like. 
-- [x] **Login placeholder** - 2 forms for login on index.html, one for the username, and one for the password.
-- [ ] **DB data placeholder** - I did not complete this part of the deliverable.
-- [ ] **WebSocket placeholder** - I did not complete this part of the deliverable.
+- [x] **Login placeholder** - 2 forms for login on `index.html`, one for the username, and one for the password.
+- [x] **DB data placeholder** - Message history stored in the textarea placeholder in `chat.html`.
+- [x] **WebSocket placeholder** - Users can send messages in real-time in the placeholder text input area in `chat.html`.
 
 ## 🚀 CSS deliverable
 
