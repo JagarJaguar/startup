@@ -40,3 +40,5 @@ Going to start using bulletpoints to make things easier since it is a lot to cov
 - Got the base web pages down and added the header to every website page.
 - Database placeholder will be username storage and saved messages.
 - Chatting placeholder will also possibly use emoji API if chatting service does not already include emoji selection.
+- Chatbox will most likely be a lot bigger and in the center of the page in the final version.
+- Classes may need to be added as CSS is added.
