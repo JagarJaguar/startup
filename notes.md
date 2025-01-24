@@ -42,3 +42,14 @@ Going to start using bulletpoints to make things easier since it is a lot to cov
 - Chatting placeholder will also possibly use emoji API if chatting service does not already include emoji selection.
 - Chatbox will most likely be a lot bigger and in the center of the page in the final version.
 - Classes may need to be added as CSS is added.
+
+## CSS Notes
+
+- CSS can control each element and classes.
+- Use border-radius to add corners to backgrounds.
+- Padding adds extra area.
+- Border options ex: `thin white solid`
+- Animations - Use classes, `animation-name:` and `animation-duration`
+- Keyframes have a lot of control and variables you can use to move elements around.
+- Importing fonts: Use Googles free font [website](https://fonts.google.com/)
+- Refer to CodePen CSS Practice for ideas later.
