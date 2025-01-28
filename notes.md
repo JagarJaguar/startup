@@ -53,3 +53,5 @@ Going to start using bulletpoints to make things easier since it is a lot to cov
 - Keyframes have a lot of control and variables you can use to move elements around.
 - Importing fonts: Use Googles free font [website](https://fonts.google.com/)
 - Refer to CodePen CSS Practice for ideas later.
+- Refer to simon CSS for examples.
+- Flex allows for control between different aspect ratios.
