@@ -55,4 +55,5 @@ Going to start using bulletpoints to make things easier since it is a lot to cov
 - Refer to CodePen CSS Practice for ideas later.
 - Refer to simon CSS for examples.
 - Flex allows for control between different aspect ratios.
-- Use bootstrap components for certain things.
+- Use bootstrap components for certain things (integrate with CSS as well).
+- Debug on browser to see different views for mobile devices.
