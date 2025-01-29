@@ -11,7 +11,7 @@ main {
     flex-grow: 1;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: center;;
 }
 
 header {
@@ -49,30 +49,20 @@ menu li {
     padding-inline: 15px;
 }
 
+/* FOR ABOUT PAGE */
+
+main p {
+    font-size: 20px;
+}
+
+
 /* FOOTER/MEDIA FOR ALL PAGES */
 
 footer {
-    flex: 0 30px;
-    background: hsl(0, 0%, 32%);
     display: flex;
     justify-content: space-between;
-}
-
-.author {
-    color: white;
-    font-size: 20px;
-    padding-left: 10px;
-}
-
-footer a {
-    color: white;
-    font-size: 20px;
-    padding-right: 10px;
-    text-decoration: none;
-}
-
-footer a:hover {
-    color: white;
+    align-items: center;
+    padding: 5px;
 }
 
 @media (max-height: 600px) {
