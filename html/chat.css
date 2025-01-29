@@ -1,0 +1,92 @@
+html,
+body {
+    text-align: center;
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-shadow: 0px 1px 2px rgb(135, 135, 135);
+}
+
+header {
+    flex: 0 80px;
+    background: hsl(155, 44%, 32%);
+    padding-top: 15px;
+    margin: 0;
+}
+
+header h1 {
+    color: white;
+}
+
+nav .nav-link {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+menu li {
+    display: inline;
+}
+
+.nav-link a.active {
+    font-weight: bold;
+}
+
+.nav-link a {
+    color: white;
+    padding-bottom: 15px;
+    padding-inline: 15px;
+}
+
+/* FORMS -- REMOVE/CHANGE FOR OTHER PAGES */
+
+form {
+    max-width: 400px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+.input-group {
+    padding: 5px;
+}
+
+form button {
+    margin-top: 5px;
+}
+
+/* FOOTER/MEDIA FOR ALL PAGES */
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+}
+
+@media (max-height: 600px) {
+    header {
+        display: none;
+    }
+
+    footer {
+        display: none;
+    }
+
+    main {
+        flex: 1 100%;
+    }
+}
