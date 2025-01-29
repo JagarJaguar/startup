@@ -25,6 +25,10 @@
     margin: 0;
   }
 
+  header h1 {
+    color: white;
+  }
+
   menu {
     flex: 1;
     display: flex;
@@ -48,15 +52,6 @@
     align-items: center;
 }
 
-  header h1 {
-    color: white;
-  }
-
-  footer {
-    flex: 0 30px;
-    background: hsl(0, 0%, 32%);
-  }
-
   footer {
     flex: 0 30px;
     background: hsl(0, 0%, 32%);
@@ -66,12 +61,12 @@
     padding: 10px; 
   }
 
-  .author {
+  footer a {
     color: white;
     font-size: 20px;
   }
 
-  footer a {
+  .author {
     color: white;
     font-size: 20px;
   }
