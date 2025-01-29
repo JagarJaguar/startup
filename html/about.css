@@ -61,9 +61,15 @@ main p {
 
 #emoji {
     font-size: 50px;
-    background-color: rgb(145, 145, 145);
+    background-color: hsl(155, 20%, 32%);
     margin: 0 auto;
     border-radius: 8px;
+}
+
+.picture-box {
+    background: hsl(155, 20%, 32%);;
+    padding: 10px;
+    margin: 0 auto;
 }
 
 /* FOOTER/MEDIA FOR ALL PAGES */
