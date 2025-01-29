@@ -53,19 +53,27 @@ menu li {
 /* FORMS -- REMOVE/CHANGE FOR OTHER PAGES */
 
 form {
-    max-width: 400px;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: auto;
+    max-width: 800px;
 }
 
 .input-group {
     padding: 5px;
 }
 
-form button {
-    margin-top: 5px;
+button {
+    max-width: 800px;
+}
+
+main label {
+    margin-bottom: 0px;
+}
+
+label {
+    text-align: left;
+}
+
+textarea {
+    max-width: 800px;
 }
 
 /* FOOTER/MEDIA FOR ALL PAGES */
@@ -75,6 +83,7 @@ footer {
     justify-content: space-between;
     align-items: center;
     padding: 5px;
+    margin-top: auto;
 }
 
 @media (max-height: 600px) {
