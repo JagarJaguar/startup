@@ -39,6 +39,10 @@ menu {
     margin: 0;
 }
 
+menu li {
+    display: inline;
+}
+
 .nav-link a.active {
     font-weight: bold;
 }
@@ -46,12 +50,6 @@ menu {
 .nav-link a {
     color: white;
     padding: 15px;
-}
-
-.nav-link {
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 /* FOOTER/MEDIA FOR ALL PAGES */
