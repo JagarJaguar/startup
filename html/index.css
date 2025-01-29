@@ -61,12 +61,12 @@
     padding: 10px; 
   }
 
-  footer a {
+  .author {
     color: white;
     font-size: 20px;
   }
 
-  .author {
+  footer a {
     color: white;
     font-size: 20px;
   }
