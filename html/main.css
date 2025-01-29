@@ -1,11 +1,6 @@
-* {
-    text-align: center;
-    font-family: sans-serif;
-    color: black;
-}
-
 html,
 body {
+    text-align: center;
     height: 100%;
     margin: 0;
     display: flex;
@@ -52,6 +47,19 @@ menu li {
     color: white;
     padding-bottom: 15px;
     padding-inline: 15px;
+}
+
+/* FORMS -- REMOVE/CHANGE FOR OTHER PAGES */
+
+form {
+    width: 400px;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+.input-group {
+    padding: 5px;
 }
 
 /* FOOTER/MEDIA FOR ALL PAGES */
