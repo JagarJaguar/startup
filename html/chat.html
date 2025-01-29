@@ -33,9 +33,9 @@
         </header>
 
         <main>
-            <label for="text"><b>Logged in as: </b> Username</label>
+            <label for="textarea"><b>Logged in as: </b> Username</label>
             <br />
-            <textarea id="textarea" name="varTextarea" rows="10" cols="60"
+            <textarea id="textarea" name="varTextarea" class="form-control" rows="10" cols="60"
                 readonly>
 
 
@@ -53,14 +53,12 @@ Bob: Hi 😄
             <label for="text"><b>Message: </b></label>
             <form method="get" action="chat.html">
                 <div class="input-group">
-                    <input class="form-control" type="text"
-                        placeholder="Your message here" />
+                    <input class="form-control" type="text" placeholder="Your message here" />
+                    <button type="submit" class="btn btn-secondary">Send Message</button>
+                    <button type="submit" class="btn btn-primary">😀</button>
                 </div>
             </form>
-            <button type="submit"
-            class="btn btn-secondary">Send Message</button>
-        <button type="submit" class="btn btn-primary">😀
-        </button>
+
 
         <footer class="bg-dark text-white">
             <div
