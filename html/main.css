@@ -52,7 +52,9 @@ menu li {
 /* FORMS -- REMOVE/CHANGE FOR OTHER PAGES */
 
 form {
-    width: 400px;
+    display: flex;
+    max-width: 400px;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     margin: auto;
@@ -103,6 +105,6 @@ footer a:hover {
     }
 
     main {
-        flex: 1 100vh;
+        flex: 1 100%;
     }
 }
