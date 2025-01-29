@@ -23,18 +23,16 @@
     background: hsl(155, 44%, 32%);
   }
 
-  header menu {
-    list-style: none;
-    padding: 0;
-    display: flex;
-  }
-
   menu {
     flex: 1;
     display: flex;
     flex-direction: row !important;
     list-style: none;
   }
+  
+  .nav-link a.active {
+    font-weight: bold;
+}
 
   header h1 {
     color: white;
