@@ -56,22 +56,6 @@ form {
     max-width: 800px;
 }
 
-.input-group {
-    padding: 5px;
-}
-
-button {
-    max-width: 800px;
-}
-
-main label {
-    margin-bottom: 0px;
-}
-
-label {
-    text-align: left;
-}
-
 textarea {
     max-width: 800px;
     resize: none !important;
