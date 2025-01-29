@@ -51,11 +51,16 @@ Bob: Hi 😄
             <br />
 
             <label for="text"><b>Message: </b></label>
-            <input type="text" id="textMessage" name="sendMessage"
-                placeholder="Your message here" size="33" />
-            <button type="button">😀</button>
-            <button type="submit">Send Message</button>
-        </main>
+            <form method="get" action="chat.html">
+                <div class="input-group">
+                    <input class="form-control" type="text"
+                        placeholder="Your message here" />
+                </div>
+                <button type="submit"
+                    class="btn btn-secondary">Send Message</button>
+                <button type="submit" class="btn btn-primary">😀
+                </button>
+            </form>
 
         <footer class="bg-dark text-white">
             <div
