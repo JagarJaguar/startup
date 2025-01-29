@@ -55,6 +55,13 @@ main p {
     font-size: 20px;
 }
 
+.caption {
+    font-size: 13px;
+}
+
+#emoji {
+    font-size: 50px;
+}
 
 /* FOOTER/MEDIA FOR ALL PAGES */
 
