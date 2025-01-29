@@ -67,13 +67,14 @@ main p {
 }
 
 .picture-box {
+    display: flex;
     background: hsl(155, 20%, 32%);;
     padding: 10px;
     margin: 0 auto;
 }
 
 img {
-    width: 800px;
+    max-width: 800px;
 }
 
 /* FOOTER/MEDIA FOR ALL PAGES */
