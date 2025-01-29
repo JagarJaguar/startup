@@ -77,6 +77,10 @@ textarea {
     resize: none !important;
 }
 
+main h2 {
+    margin-top: 10px;
+}
+
 /* FOOTER/MEDIA FOR ALL PAGES */
 
 footer {
