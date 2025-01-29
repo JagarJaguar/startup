@@ -74,6 +74,7 @@ label {
 
 textarea {
     max-width: 800px;
+    resize: none !important;
 }
 
 /* FOOTER/MEDIA FOR ALL PAGES */
