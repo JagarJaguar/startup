@@ -73,7 +73,6 @@ footer {
     flex: 0 30px;
     background: hsl(0, 0%, 32%);
     display: flex;
-    align-items: center;
     justify-content: space-between;
 }
 
