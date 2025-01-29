@@ -65,6 +65,10 @@ main h2 {
     margin-top: 10px;
 }
 
+.form-control {
+    margin-right: 5px;
+}
+
 /* FOOTER/MEDIA FOR ALL PAGES */
 
 footer {
