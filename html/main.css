@@ -62,6 +62,10 @@ form {
     padding: 5px;
 }
 
+form button {
+    margin-top: 5px;
+}
+
 /* FOOTER/MEDIA FOR ALL PAGES */
 
 footer {
