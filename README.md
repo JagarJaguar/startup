@@ -85,12 +85,12 @@ For this deliverable I did the following. I checked the box `[x]` and added a de
 
 For this deliverable I did the following. I checked the box `[x]` and added a description for things I completed.
 
-- [ ] **Header, footer, and main content body** - I did not complete this part of the deliverable.
-- [ ] **Navigation elements** - I did not complete this part of the deliverable.
-- [ ] **Responsive to window resizing** - I did not complete this part of the deliverable.
-- [ ] **Application elements** - I did not complete this part of the deliverable.
-- [ ] **Application text content** - I did not complete this part of the deliverable.
-- [ ] **Application images** - I did not complete this part of the deliverable.
+- [x] **Header, footer, and main content body** - Added styling to the header, footer (bootstrap), and main body.
+- [x] **Navigation elements** - Centered navigation menu, added bolding to elements that you are selected on, colored white as well.
+- [x] **Responsive to window resizing** - Application is responsive to different window resizing and devices.
+- [x] **Application elements** - Added styling and centered everything to make it more cohesive and easier on the eyes. Added shadowing to where it was applicable, used good spacing between different elements.
+- [x] **Application text content** - All text uses same font, shadows on text elements as well.
+- [x] **Application images** - Added styling to my image on my about page (sort of like a frame), also added a frame around the emoji 3rd party API placeholder.
 
 ## 🚀 React part 1: Routing deliverable
 
