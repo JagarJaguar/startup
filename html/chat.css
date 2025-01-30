@@ -53,12 +53,16 @@ menu li {
 /* FORMS -- REMOVE/CHANGE FOR OTHER PAGES */
 
 form {
-    margin: 0 465px 0;
+    display: flex;
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
 }
 
 textarea {
     max-width: 800px;
     resize: none !important;
+    height: 500px;
 }
 
 main h2 {
@@ -66,6 +70,7 @@ main h2 {
 }
 
 .form-control {
+    flex-grow: 0;
     margin-right: 5px;
     margin: 0 auto;
 }
