@@ -86,7 +86,7 @@ For this deliverable I did the following. I checked the box `[x]` and added a de
 For this deliverable I did the following. I checked the box `[x]` and added a description for things I completed.
 
 - [x] **Header, footer, and main content body** - Added styling to the header, footer (bootstrap), and main body.
-- [x] **Navigation elements** - Centered navigation menu, added bolding to elements that you are selected on, colored white as well.
+- [x] **Navigation elements** - Centered navigation menu, added bolding to elements that you are selected on as well as underline. Made text white as well.
 - [x] **Responsive to window resizing** - Application is responsive to different window resizing and devices.
 - [x] **Application elements** - Added styling and centered everything to make it more cohesive and easier on the eyes. Added shadowing to where it was applicable, used good spacing between different elements.
 - [x] **Application text content** - All text uses same font, shadows on text elements as well.
