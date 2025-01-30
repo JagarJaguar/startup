@@ -42,6 +42,7 @@ menu li {
 
 .nav-link a.active {
     font-weight: bold;
+    text-decoration: underline;
 }
 
 .nav-link a {
