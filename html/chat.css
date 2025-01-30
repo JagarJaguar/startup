@@ -53,7 +53,7 @@ menu li {
 /* FORMS -- REMOVE/CHANGE FOR OTHER PAGES */
 
 form {
-    max-width: 800px;
+    margin: 0 465px 0;
 }
 
 textarea {
@@ -67,6 +67,7 @@ main h2 {
 
 .form-control {
     margin-right: 5px;
+    margin: 0 auto;
 }
 
 /* FOOTER/MEDIA FOR ALL PAGES */
