@@ -57,3 +57,4 @@ Going to start using bulletpoints to make things easier since it is a lot to cov
 - Flex allows for control between different aspect ratios.
 - Use bootstrap components for certain things (integrate with CSS as well).
 - Debug on browser to see different views for mobile devices.
+- Flex can be finnicky, use bootstrap when applicable moreso in the future.
