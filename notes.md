@@ -67,3 +67,4 @@ Going to start using bulletpoints to make things easier since it is a lot to cov
 - Using Vite to build to production environment. Starts rendering with `index.html`, then `main.jsx`, then `App.jsx`.
 - Rename `class` attribute in HTML to `className` in app.jsx, will be transpiled into valid HTML.
 - `a` is replaced with `Navlink` and `to`, html file is replaced with route name.
+- Change `class` to `className` in the JSX files when moving HTML over.
