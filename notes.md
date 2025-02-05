@@ -64,3 +64,4 @@ Going to start using bulletpoints to make things easier since it is a lot to cov
 - Use `<MemoryRouter>` to test code in memory (not connected to browser).
 - Nesting Routes, set Route to index for main /.
 - Use `<Outlet />` in parent layout file to load elements.
+- Using Vite to build to production environment. Starts rendering with `index.html`, then `main.jsx`, then `App.jsx`.
