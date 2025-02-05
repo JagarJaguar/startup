@@ -65,3 +65,4 @@ Going to start using bulletpoints to make things easier since it is a lot to cov
 - Nesting Routes, set Route to index for main /.
 - Use `<Outlet />` in parent layout file to load elements.
 - Using Vite to build to production environment. Starts rendering with `index.html`, then `main.jsx`, then `App.jsx`.
+- Rename `class` attribute in HTML to `className` in app.jsx, will be transpiled into valid HTML.
