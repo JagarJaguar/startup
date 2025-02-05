@@ -58,3 +58,7 @@ Going to start using bulletpoints to make things easier since it is a lot to cov
 - Use bootstrap components for certain things (integrate with CSS as well).
 - Debug on browser to see different views for mobile devices.
 - Flex can be finnicky, use bootstrap when applicable moreso in the future.
+
+## React Notes
+- Can use CSS and HTML in JSX files
+- Use `<MemoryRouter>` to test code in memory (not connected to browser).
