@@ -63,3 +63,4 @@ Going to start using bulletpoints to make things easier since it is a lot to cov
 - Can use CSS and HTML in JSX files
 - Use `<MemoryRouter>` to test code in memory (not connected to browser).
 - Nesting Routes, set Route to index for main /.
+- Use `<Outlet />` in parent layout file to load elements.
