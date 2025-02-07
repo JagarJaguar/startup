@@ -40,10 +40,6 @@ menu li {
     display: inline;
 }
 
-.nav-link a.active {
-    font-weight: bold;
-    text-decoration: underline;
-}
 
 .nav-link a {
     color: white;
