@@ -21,13 +21,13 @@ export function Chat() {
 
 
 
-Doc: How is HTML going so far?
+Doc: How is HTML going so far? 
 Melissa: Hey guys!
 Bob: Hi 😄
     </textarea>
     <br />
 
-    <form method="get" action="chat.html">
+    <form method="get" action="chat.html" className="textForm">
         <div className="input-group">
             <input className="form-control" type="text"
                 placeholder="Your message here" />

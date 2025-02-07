@@ -6,7 +6,7 @@ export function Login() {
     <main>
     <div>
         <h1><b>Welcome to JagarChat!</b></h1>
-        <form method="get" action="chat.html">
+        <form method="get" action="chat.html" className="loginForm">
             <div className="input-group">
                 <span className="input-group-text">👤</span>
                 <input className="form-control" type="text"
