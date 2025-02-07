@@ -101,6 +101,7 @@ For this deliverable I did the following. I checked the box `[x]` and added a de
     - **Login** - Both login buttons take you to the chat page.
     - **Chat** - I had to re-do some of the HTML and CSS, but it is mostly the same. Changed the textarea tag before to `htmlFor` for JSX. Placeholder for sending messages, using emojis, and chat history.
     - **About** - 3rd party emoji API placeholder is still there, all previous elements are where they are supposed to be.
+    - **Not Found** - Added a not found page.
 - [x] **Router** - Routing between login, chat, and about.
 
 ## 🚀 React part 2: Reactivity
