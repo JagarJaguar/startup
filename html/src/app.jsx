@@ -50,5 +50,5 @@ export default function App() {
 }
 
 function NotFound() {
-    return <main>404: Return to sender. Address unknown.</main>;
+    return <main style={{fontSize: '70px'}}>This page doesn't exist!</main>;
 }
