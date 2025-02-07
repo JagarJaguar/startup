@@ -47,6 +47,11 @@ menu li {
     padding-inline: 15px;
 }
 
+.nav-link a.active {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
 /* FORMS -- REMOVE/CHANGE FOR OTHER PAGES */
 
 form {
@@ -61,7 +66,7 @@ form {
     padding: 5px;
 }
 
-form button {
+.btn {
     margin-top: 5px;
     box-shadow: -3px 3px rgb(189, 189, 189);
     margin-inline: 3px;

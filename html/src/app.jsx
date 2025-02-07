@@ -16,7 +16,7 @@ export default function App() {
                 <nav className="navbar">
                     <menu className="nav-link">
                         <li className="nav-item">
-                            <NavLink className='nav-link' to=''>Home</NavLink>
+                            <NavLink className='nav-link active' to=''>Home</NavLink>
                         </li>
                         <li>
                             <NavLink className='nav-link' to='chat'>Chat</NavLink>

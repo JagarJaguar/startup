@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from "react-router-dom";
 
 export function Login() {
   return (
@@ -16,10 +17,8 @@ export function Login() {
                 <input className="form-control" type="password"
                     placeholder="Enter Password" />
             </div>
-            <button type="submit"
-                className="btn btn-secondary">Login</button>
-            <button type="submit" class="btn btn-primary">Create
-            </button>
+            <NavLink to="chat" className="btn btn-secondary">Login</NavLink>
+            <NavLink to="chat" className="btn btn-primary">Create</NavLink>
         </form>
     </div>
     <br />
