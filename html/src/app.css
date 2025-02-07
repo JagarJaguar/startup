@@ -64,6 +64,7 @@ form {
 form button {
     margin-top: 5px;
     box-shadow: -3px 3px rgb(189, 189, 189);
+    margin-inline: 3px;
 }
 
 /* FOOTER/MEDIA FOR ALL PAGES */
