@@ -1,24 +1,22 @@
-form {
+.chat-page {
+    flex-grow: 1;
     display: flex;
-    max-width: 800px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.chat-container {
     width: 100%;
-    margin: 0px auto;
-    box-shadow: -3px 3px rgb(189, 189, 189);
-    border-radius: 7px;
-}
-
-textarea {
-    display: flex;
     max-width: 800px;
-    resize: vertical;
+    background: #fff;
 }
 
-main h2 {
-    margin-top: 10px;
+.chat-input-group {
+    display: flex;
+    width: 100%;
+    align-items: center;
 }
 
-.form-control {
-    flex-grow: 0;
-    margin: 0px auto;
-    box-shadow: -3px 3px rgb(189, 189, 189);
+.chat-input-group .btn {
+    margin: 4px;
 }
