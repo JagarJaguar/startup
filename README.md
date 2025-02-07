@@ -96,9 +96,12 @@ For this deliverable I did the following. I checked the box `[x]` and added a de
 
 For this deliverable I did the following. I checked the box `[x]` and added a description for things I completed.
 
-- [ ] **Bundled using Vite** - I did not complete this part of the deliverable.
-- [ ] **Components** - I did not complete this part of the deliverable.
-- [ ] **Router** - Routing between login and voting components.
+- [x] **Bundled using Vite** - Installed Vite and other necessary packages.
+- [x] **Components** Login (Home), Chat, and about are all replaced with React components and placeholders are kept. All `class` properties were replaced with `className`.
+    - **Login** - Both login buttons take you to the chat page.
+    - **Chat** - I had to re-do some of the HTML and CSS, but it is mostly the same. Changed the textarea tag before to `htmlFor` for JSX. Placeholder for sending messages, using emojis, and chat history.
+    - **About** - 3rd party emoji API placeholder is still there, all previous elements are where they are supposed to be.
+- [x] **Router** - Routing between login, chat, and about.
 
 ## 🚀 React part 2: Reactivity
 
