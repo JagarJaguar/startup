@@ -8,7 +8,14 @@
 .chat-container {
     width: 100%;
     max-width: 800px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.219);
+    padding: 20px;
+    border-radius: 20px;
     background: #fff;
+}
+
+.chat-container label {
+    margin-bottom: 15px;
 }
 
 .chat-input-group {
