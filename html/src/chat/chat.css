@@ -24,6 +24,10 @@
     align-items: center;
 }
 
+.chat-input-group input {
+    margin-right: 5px;
+}
+
 .chat-input-group .btn {
     margin: 4px;
 }
