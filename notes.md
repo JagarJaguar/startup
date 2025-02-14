@@ -59,7 +59,7 @@ Going to start using bulletpoints to make things easier since it is a lot to cov
 - Debug on browser to see different views for mobile devices.
 - Flex can be finnicky, use bootstrap when applicable moreso in the future.
 
-## React Notes
+## React P1 Notes
 - Can use CSS and HTML in JSX files
 - Use `<MemoryRouter>` to test code in memory (not connected to browser).
 - Nesting Routes, set Route to index for main /.
@@ -69,3 +69,6 @@ Going to start using bulletpoints to make things easier since it is a lot to cov
 - `a` is replaced with `Navlink` and `to`, html file is replaced with route name.
 - Change `class` to `className` in the JSX files when moving HTML over.
 - CSS interferes with each page (found out the hard way).
+
+## React P2 Notes
+- Authentication is controlled by multiple different states. Can render/unrender elements using JS.
