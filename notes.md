@@ -72,3 +72,4 @@ Going to start using bulletpoints to make things easier since it is a lot to cov
 
 ## React P2 Notes
 - Authentication is controlled by multiple different states. Can render/unrender elements using JS.
+- `Math.random()` is pretty useful for randomizing different items in arrays.
