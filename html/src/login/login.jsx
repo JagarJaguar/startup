@@ -4,12 +4,13 @@ import { NavLink, useNavigate } from "react-router-dom";
 export function Login() {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
-    const [error, setError] = useState("");
+
     const isLoggedIn = localStorage.getItem("isAuthenticated") === "true";
     const storedUsers = JSON.parse(localStorage.getItem("users")) || {};
 
 
   const handleLogin = (e) => {
+    e.preventDefault();
     if (storedUsers[username] && storedUsers[username] === password) {
       localStorage.setItem("isAuthenticated", "true");
       localStorage.setItem("currentUser", username);
@@ -18,6 +19,7 @@ export function Login() {
 
 
   const handleCreateAccount = (e) => {
+    e.preventDefault();
     if (username in storedUsers) {
       setError("Username already exists. Try another one please ;)");
     } else {
@@ -45,7 +47,7 @@ export function Login() {
                     placeholder="Enter Password" value={password}
                     onChange={(e) => setPassword(e.target.value)} required />
             </div>
-            <NavLink to="chat" className="btn btn-secondary">Login</NavLink>
+            <button onClick={handleLogin} className="btn btn-secondary">Login</button>
             <button onClick={handleCreateAccount} className="btn btn-primary">Create</button>
         </form>
     </div>
