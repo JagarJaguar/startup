@@ -4,7 +4,7 @@ import './about.css';
 
 export function About() {
   const [imageUrl, setImageUrl] = React.useState('data:image/gif;base64,R0lGODlhAQABAIAAAAUEBAAAACwAAAAAAQABAAACAkQBADs=');
-  const [randEmoji, setEmoji] = React.useState('😜');
+  const [randEmoji, setEmoji] = React.useState('Loading...');
 
   React.useEffect(() => {
     setImageUrl('about_image.jpg')
