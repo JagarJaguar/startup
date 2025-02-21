@@ -36,15 +36,17 @@ export function Login() {
             <div className="input-group">
                 <span className="input-group-text">👤</span>
                 <input className="form-control" type="text"
-                    placeholder="Enter Username" />
+                    placeholder="Enter Username" value={username}
+                    onChange={(e) => setUsername(e.target.value)} required />
             </div>
             <div className="input-group">
                 <span className="input-group-text">🔒</span>
                 <input className="form-control" type="password"
-                    placeholder="Enter Password" />
+                    placeholder="Enter Password" value={password}
+                    onChange={(e) => setPassword(e.target.value)} required />
             </div>
             <NavLink to="chat" className="btn btn-secondary">Login</NavLink>
-            <NavLink to="chat" className="btn btn-primary">Create</NavLink>
+            <button onClick={handleCreateAccount} className="btn btn-primary">Create</button>
         </form>
     </div>
     <br />
