@@ -2,23 +2,6 @@ import React, { useState } from 'react';
 import { NavLink, useNavigate } from "react-router-dom";
 
 export function Login() {
-    const [username, setUsername] = useState("");
-    const [password, setPassword] = useState("");
-    const isLoggedIn = localStorage.getItem("isAuthenticated") === "true";
-    // const storedUsers = JSON.parse(localStorage.getItem("users")) || {};
-
-
-    const handleLogin = (e) => {
-        localStorage.setItem("isAuthenticated", "true");
-        localStorage.setItem(username, password);
-    };
-
-
-    const handleCreateAccount = (e) => {
-        localStorage.setItem("isAuthenticated", "true");
-        localStorage.setItem(username, password);
-    };
-
     return (
         <main>
             <div>
@@ -27,17 +10,15 @@ export function Login() {
                     <div className="input-group">
                         <span className="input-group-text">👤</span>
                         <input className="form-control" type="text"
-                            placeholder="Enter Username" value={username}
-                            onChange={(e) => setUsername(e.target.value)} required />
+                            placeholder="Enter Username" />
                     </div>
                     <div className="input-group">
                         <span className="input-group-text">🔒</span>
                         <input className="form-control" type="password"
-                            placeholder="Enter Password" value={password}
-                            onChange={(e) => setPassword(e.target.value)} required />
+                            placeholder="Enter Password" />
                     </div>
-                    <button onClick={handleLogin} className="btn btn-secondary">Login</button>
-                    <button onClick={handleCreateAccount} className="btn btn-primary">Create</button>
+                    <NavLink to='chat' className="btn btn-secondary">Login</NavLink>
+                    <NavLink to='chat' className="btn btn-primary">Create</NavLink>
                 </form>
             </div>
             <br />
