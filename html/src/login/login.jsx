@@ -16,6 +16,18 @@ export function Login() {
     }
   };
 
+
+  const handleCreateAccount = (e) => {
+    if (username in storedUsers) {
+      setError("Username already exists. Try another one please ;)");
+    } else {
+      storedUsers[username] = password;
+      localStorage.setItem("users", JSON.stringify(storedUsers)); // Stringify to store in JSON
+      localStorage.setItem("isAuthenticated", "true");
+      localStorage.setItem("currentUser", username);
+    }
+  };
+
   return (
     <main>
     <div>
