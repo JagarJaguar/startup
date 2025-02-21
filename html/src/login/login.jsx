@@ -5,9 +5,16 @@ export function Login() {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
     const [error, setError] = useState("");
-    const navigate = useNavigate();
     const isLoggedIn = localStorage.getItem("isAuthenticated") === "true";
     const storedUsers = JSON.parse(localStorage.getItem("users")) || {};
+
+
+  const handleLogin = (e) => {
+    if (storedUsers[username] && storedUsers[username] === password) {
+      localStorage.setItem("isAuthenticated", "true");
+      localStorage.setItem("currentUser", username);
+    }
+  };
 
   return (
     <main>
