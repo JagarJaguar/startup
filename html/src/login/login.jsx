@@ -6,13 +6,11 @@ export function Login() {
     const [password, setPassword] = useState("");
 
     const Login = (e) => {
-        e.preventDefault();
         localStorage.setItem("isAuthenticated", "true");
         localStorage.setItem("username", username);
     };
 
     const createAccount = (e) => {
-        e.preventDefault();
         localStorage.setItem("isAuthenticated", "true");
         localStorage.setItem("username", username);
     };
@@ -25,15 +23,17 @@ export function Login() {
                     <div className="input-group">
                         <span className="input-group-text">👤</span>
                         <input className="form-control" type="text"
-                            placeholder="Enter Username" />
+                            placeholder="Enter Username" value={username}
+                            onChange={(e) => setUsername(e.target.value)}/>
                     </div>
                     <div className="input-group">
                         <span className="input-group-text">🔒</span>
                         <input className="form-control" type="password"
-                            placeholder="Enter Password" />
+                            placeholder="Enter Password" value={password}
+                            onChange={(e) => setPassword(e.target.value)}/>
                     </div>
-                    <NavLink to='chat' className="btn btn-secondary">Login</NavLink>
-                    <NavLink to='chat' className="btn btn-primary">Create</NavLink>
+                    <NavLink to='chat' className="btn btn-secondary" onClick={Login}>Login</NavLink>
+                    <NavLink to='chat' className="btn btn-primary" onClick={createAccount}>Create</NavLink>
                 </form>
             </div>
             <br />
