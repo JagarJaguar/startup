@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { NavLink, useNavigate } from "react-router-dom";
-import './logout.css';
 
 export function Login() {
     const [username, setUsername] = useState(localStorage.getItem("username") || "");
@@ -28,10 +27,13 @@ export function Login() {
             <main>
                 <h1>Welcome to JagarChat!</h1>
                 <p>Logged in as <b>{username}</b></p>
-                <button className="btn btn-danger" onClick={Logout}>Logout</button>
+                <div>
+                    <button className="btn btn-primary" onClick={Logout}>Logout</button>
+                </div>
             </main>
         );
     }
+    
 
     return (
         <main>
