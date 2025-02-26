@@ -4,14 +4,17 @@ import { NavLink, useNavigate } from "react-router-dom";
 export function Login() {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
-    const [isLoggedIn, setIsLoggedIn] = useState(localStorage.getItem("isAuthenticated") === "true");
-
 
     const Login = (e) => {
         e.preventDefault();
         localStorage.setItem("isAuthenticated", "true");
         localStorage.setItem("username", username);
-        setIsLoggedIn(true);
+    };
+
+    const createAccount = (e) => {
+        e.preventDefault();
+        localStorage.setItem("isAuthenticated", "true");
+        localStorage.setItem("username", username);
     };
 
     return (
