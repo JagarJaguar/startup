@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 
 export function Login() {
     const [username, setUsername] = useState("");
@@ -8,11 +8,13 @@ export function Login() {
     const Login = (e) => {
         localStorage.setItem("isAuthenticated", "true");
         localStorage.setItem("username", username);
+        window.location.reload();
     };
 
     const createAccount = (e) => {
         localStorage.setItem("isAuthenticated", "true");
         localStorage.setItem("username", username);
+        window.location.reload();
     };
 
     return (
