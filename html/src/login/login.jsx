@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { NavLink, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 export function Login() {
     const [username, setUsername] = useState(localStorage.getItem("username") || "");
