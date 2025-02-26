@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { NavLink, useNavigate } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 export function Login() {
     const [username, setUsername] = useState("");
@@ -24,13 +24,13 @@ export function Login() {
                         <span className="input-group-text">👤</span>
                         <input className="form-control" type="text"
                             placeholder="Enter Username" value={username}
-                            onChange={(e) => setUsername(e.target.value)}/>
+                            onChange={(e) => setUsername(e.target.value)} />
                     </div>
                     <div className="input-group">
                         <span className="input-group-text">🔒</span>
                         <input className="form-control" type="password"
                             placeholder="Enter Password" value={password}
-                            onChange={(e) => setPassword(e.target.value)}/>
+                            onChange={(e) => setPassword(e.target.value)} />
                     </div>
                     <NavLink to='chat' className="btn btn-secondary" onClick={Login}>Login</NavLink>
                     <NavLink to='chat' className="btn btn-primary" onClick={createAccount}>Create</NavLink>
