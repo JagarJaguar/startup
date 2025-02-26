@@ -33,13 +33,12 @@ export function Login() {
             </main>
         );
     }
-    
 
     return (
         <main>
             <div>
                 <h1><b>Welcome to JagarChat!</b></h1>
-                <form method="get" action="chat.html" className="loginForm">
+                <form method="get" action="/" className="loginForm">
                     <div className="input-group">
                         <span className="input-group-text">👤</span>
                         <input className="form-control" type="text"
@@ -52,8 +51,8 @@ export function Login() {
                             placeholder="Enter Password" value={password}
                             onChange={(e) => setPassword(e.target.value)} />
                     </div>
-                    <NavLink to='/' className="btn btn-secondary" onClick={Login}>Login</NavLink>
-                    <NavLink to='/' className="btn btn-primary" onClick={Login}>Create</NavLink>
+                    <button className="btn btn-secondary" onClick={Login} disabled={!username || !password}>Login</button>
+                <button className="btn btn-primary" onClick={Login} disabled={!username || !password}>Create</button>
                 </form>
             </div>
             <br />
