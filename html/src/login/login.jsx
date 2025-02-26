@@ -1,24 +1,37 @@
 import React, { useState } from 'react';
 import { NavLink, useNavigate } from "react-router-dom";
+import './logout.css';
 
 export function Login() {
-    const [username, setUsername] = useState("");
+    const [username, setUsername] = useState(localStorage.getItem("username") || "");
     const [password, setPassword] = useState("");
+    const isLoggedIn = localStorage.getItem("isAuthenticated") === "true";
     const navigate = useNavigate();
 
     const Login = (e) => {
         localStorage.setItem("isAuthenticated", "true");
         localStorage.setItem("username", username);
-        navigate('/chat');
+        localStorage.setItem("password", password);
         window.location.reload();
     };
 
-    const createAccount = (e) => {
-        localStorage.setItem("isAuthenticated", "true");
-        localStorage.setItem("username", username);
-        navigate("/chat");
+    const Logout = () => {
+        localStorage.removeItem("isAuthenticated");
+        localStorage.removeItem("username");
+        localStorage.removeItem("password");
+        navigate('/');
         window.location.reload();
     };
+
+    if (isLoggedIn) {
+        return (
+            <main>
+                <h1>Welcome to JagarChat!</h1>
+                <p>Logged in as <b>{username}</b></p>
+                <button className="btn btn-danger" onClick={Logout}>Logout</button>
+            </main>
+        );
+    }
 
     return (
         <main>
@@ -37,8 +50,8 @@ export function Login() {
                             placeholder="Enter Password" value={password}
                             onChange={(e) => setPassword(e.target.value)} />
                     </div>
-                    <NavLink to='chat' className="btn btn-secondary" onClick={Login}>Login</NavLink>
-                    <NavLink to='chat' className="btn btn-primary" onClick={createAccount}>Create</NavLink>
+                    <NavLink to='/' className="btn btn-secondary" onClick={Login}>Login</NavLink>
+                    <NavLink to='/' className="btn btn-primary" onClick={Login}>Create</NavLink>
                 </form>
             </div>
             <br />
