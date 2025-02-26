@@ -41,9 +41,13 @@ menu li {
 
 
 .nav-link a {
-    color: white;
+    color: white !important;
     padding-bottom: 15px;
     padding-inline: 15px;
+}
+
+.navbar .nav-link:hover  {
+    color: #1e1e1e !important;
 }
 
 .nav-link a.active {
