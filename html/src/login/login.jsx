@@ -4,16 +4,19 @@ import { NavLink, useNavigate } from "react-router-dom";
 export function Login() {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
+    const navigate = useNavigate();
 
     const Login = (e) => {
         localStorage.setItem("isAuthenticated", "true");
         localStorage.setItem("username", username);
+        navigate('/chat');
         window.location.reload();
     };
 
     const createAccount = (e) => {
         localStorage.setItem("isAuthenticated", "true");
         localStorage.setItem("username", username);
+        navigate("/chat");
         window.location.reload();
     };
 
