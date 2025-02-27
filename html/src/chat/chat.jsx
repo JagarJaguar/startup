@@ -1,8 +1,10 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './chat.css';
 
 export function Chat() {
     const username = localStorage.getItem("username"); 
+    const [message, setMessage] = useState('');
+    const [messages, setMessages] = useState([]); 
 
     return (
         <main className="chat-page">
