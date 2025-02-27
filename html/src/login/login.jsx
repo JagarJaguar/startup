@@ -18,6 +18,7 @@ export function Login() {
         localStorage.removeItem("isAuthenticated");
         localStorage.removeItem("username");
         localStorage.removeItem("password");
+        localStorage.removeItem("messages");
         navigate('/');
         window.location.reload();
     };
