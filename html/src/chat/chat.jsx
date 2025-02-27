@@ -11,6 +11,13 @@ export function Chat() {
         setMessages(savedMessages);
     }, []); // Load messages when page refresh to save them.
 
+    const sendMessages = () => {
+        const trimmedMessage = message.trim();
+        if (trimmedMessage) {
+            const newMessage = '${username}: ${message}';
+        }
+    }
+
     return (
         <main className="chat-page">
             <div className="chat-container">
