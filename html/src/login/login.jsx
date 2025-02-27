@@ -29,7 +29,7 @@ export function Login() {
                 <h1>Welcome to JagarChat!</h1>
                 <p>Logged in as <b>{username}</b></p>
                 <div>
-                    <button className="btn btn-primary" onClick={Logout}>Logout</button>
+                    <button className="btn btn-danger" onClick={Logout}>Logout</button>
                 </div>
             </main>
         );
@@ -53,7 +53,7 @@ export function Login() {
                             onChange={(e) => setPassword(e.target.value)} />
                     </div>
                     <button className="btn btn-secondary" onClick={Login} disabled={!username || !password}>Login</button>
-                <button className="btn btn-primary" onClick={Login} disabled={!username || !password}>Create</button>
+                    <button className="btn btn-primary" onClick={Login} disabled={!username || !password}>Create</button>
                 </form>
             </div>
             <br />
