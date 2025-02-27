@@ -108,8 +108,8 @@ For this deliverable I did the following. I checked the box `[x]` and added a de
 
 For this deliverable I did the following. I checked the box `[x]` and added a description for things I completed.
 
-- [ ] **All functionality implemented or mocked out** - I did not complete this part of the deliverable.
-- [ ] **Hooks** - I did not complete this part of the deliverable.
+- [x] **All functionality implemented or mocked out** - Login/Create account functionality saves to localstorage. Chat messages send and show up, messages saved to localstorage. 3rd party emoji API placeholder functionality mocked out, using random emojis as placeholder.
+- [x] **Hooks** - Used `useEffect` and `useState` in the about page & chat page. Used `useState` and `useNavigate` for the login page.
 
 ## 🚀 Service deliverable
 

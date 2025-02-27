@@ -3,8 +3,8 @@ import './about.css';
 
 
 export function About() {
-  const [imageUrl, setImageUrl] = React.useState('data:image/gif;base64,R0lGODlhAQABAIAAAAUEBAAAACwAAAAAAQABAAACAkQBADs=');
-  const [randEmoji, setEmoji] = React.useState('...');
+  const [imageUrl, setImageUrl] = useState('data:image/gif;base64,R0lGODlhAQABAIAAAAUEBAAAACwAAAAAAQABAAACAkQBADs=');
+  const [randEmoji, setEmoji] = useState('...');
 
   useEffect(() => {
     setImageUrl('about_image.jpg')
