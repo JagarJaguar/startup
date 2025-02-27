@@ -73,3 +73,9 @@ Going to start using bulletpoints to make things easier since it is a lot to cov
 ## React P2 Notes
 - Authentication is controlled by multiple different states. Can render/unrender elements using JS.
 - `Math.random()` is pretty useful for randomizing different items in arrays.
+- `setMessage('');` for removing messages after sending, very useful to know for future references as well.
+- Login.jsx functionality was not working, spent hours thinking about why but turns out I needed to work on app.jsx as well for it to work, still not entirely sure why it works that way, but it works now so that is good.
+- useState and useEffect are incredibly useful, especially useEffect that keeps the messages saved when pages are changed.
+
+## Service Notes
+- `.fetch` can grab things from 3rd party sources. Will use for the emoji API. As well as database I believe. 
