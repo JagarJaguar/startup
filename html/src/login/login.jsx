@@ -26,7 +26,7 @@ export function Login() {
     if (isLoggedIn) {
         return (
             <main>
-                <h1>Welcome to JagarChat!</h1>
+                <h1><b>Welcome to JagarChat!</b></h1>
                 <p>Logged in as <b>{username}</b></p>
                 <div>
                     <button className="btn btn-danger" onClick={Logout}>Logout</button>
