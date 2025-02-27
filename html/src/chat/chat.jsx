@@ -6,6 +6,11 @@ export function Chat() {
     const [message, setMessage] = useState('');
     const [messages, setMessages] = useState([]); 
 
+    useEffect(() => {
+        const savedMessages = JSON.parse(localStorage.getItem("messages")) || [];
+        setMessages(savedMessages);
+    }, []); // Load messages when page refresh to save them.
+
     return (
         <main className="chat-page">
             <div className="chat-container">
