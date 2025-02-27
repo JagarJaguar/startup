@@ -27,12 +27,12 @@ export function Chat() {
                 <h2>Start Chatting Now!</h2>
                 <label htmlFor="textarea"><b>Logged in as: </b> {username}</label>
                 <br />
-                <textarea id="textarea" name="varTextarea" className="form-control" rows="14" cols="60"readOnly value={messages}>
-                    
+                <textarea id="textarea" name="varTextarea" className="form-control" 
+                rows="14" cols="60"readOnly value={messages}>
                 </textarea>
                 <br />
 
-                <form method="get" action="chat.html" className="textForm">
+                <form method="get" action={sendMessages} className="textForm">
                     <div className="chat-input-group">
                         <input className="form-control" type="text"
                             placeholder="Your message here" value={message}
