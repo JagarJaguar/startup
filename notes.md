@@ -79,3 +79,4 @@ Going to start using bulletpoints to make things easier since it is a lot to cov
 
 ## Service Notes
 - `.fetch` can grab things from 3rd party sources. Will use for the emoji API. As well as database I believe. 
+- Test services with `*` to make sure they respond, otherwise cannot use. (Seems to be mostly for 3rd party).
