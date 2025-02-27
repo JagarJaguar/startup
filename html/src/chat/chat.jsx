@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import './chat.css';
 
 export function Chat() {
@@ -14,7 +14,10 @@ export function Chat() {
     const sendMessages = () => {
         const trimmedMessage = message.trim();
         if (trimmedMessage) {
-            const newMessage = '${username}: ${message}';
+            const newMessage = `${username}: ${message}`;
+            const updatedMessages = [...messages, newMessage];
+            setMessages(updatedMessages);
+            localStorage.setItem("messages", JSON.stringify(updatedMessages));
         }
     }
 
@@ -32,9 +35,9 @@ export function Chat() {
                 <form method="get" action="chat.html" className="textForm">
                     <div className="chat-input-group">
                         <input className="form-control" type="text"
-                            placeholder="Your message here" />
-                        <button type="button" className="btn btn-primary">😀</button>
-                        <button type="button" className="btn btn-secondary">Send
+                            placeholder="Your message here" value={message}
+                            onChange={(e) => setMessage(e.target.value)}/>
+                        <button type="button" className="btn btn-secondary" onClick={sendMessages}>Send
                             Message</button>
                     </div>
                 </form>
