@@ -18,6 +18,7 @@ export function Chat() {
             const updatedMessages = [...messages, newMessage];
             setMessages(updatedMessages);
             localStorage.setItem("messages", JSON.stringify(updatedMessages));
+            setMessage('');
         }
     }
 
