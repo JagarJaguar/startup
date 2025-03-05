@@ -9,10 +9,13 @@ export function About() {
   useEffect(() => {
     setImageUrl('about_image.jpg')
 
-    const emojis = ['🔥', '🚀', '🎉', '😎', '🤖', '🌟', '🐱', '🍕'];
-    const randomIndex = Math.floor(Math.random() * emojis.length);
-    setEmoji(emojis[randomIndex]);
-  }, []);
+    fetch('https://emojihub.yurace.pro/api/random')
+    .then((response) => response.json())
+    .then((data) => {
+      setEmoji(data.htmlCode[0]); // Use the first HTML code
+    })
+    .catch((error) => console.error('Error fetching emoji:', error));
+}, []);
   return (
     <main>
       <div id="picture" className="picture-box">
