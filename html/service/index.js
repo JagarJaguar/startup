@@ -6,15 +6,14 @@ const app = express();
 
 const authCookieName = 'token';
 
-app.use(express.static('public'));
-app.use(express.json());
-app.use(cookieParser());
+let users = [];
+let messages = {};
 
 const port = process.argv.length > 2 ? process.argv[2] : 4000;
 
-app.get('*', (_req, res) => {
-  res.send({ msg: 'JagarChat Service TEST' });
-});
+app.use(express.static('public'));
+app.use(express.json());
+app.use(cookieParser());
 
 app.listen(port, () => {
   console.log(`Listening on port ${port}`);
