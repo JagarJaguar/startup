@@ -9,10 +9,11 @@ export function About() {
   useEffect(() => {
     setImageUrl('about_image.jpg')
 
-    fetch('https://emojihub.yurace.pro/api/random')
+    fetch('https://emoji-api.com/emojis?access_key=5c1932351ea80bc357973f1240c0313948d1a05c')
     .then((response) => response.json())
     .then((data) => {
-      setEmoji(data.htmlCode[0]); // Use the first HTML code
+      const randomIndex = Math.floor(Math.random() * data.length);
+      setEmoji(data[randomIndex].character); // Get the emoji character
     })
     .catch((error) => console.error('Error fetching emoji:', error));
 }, []);
