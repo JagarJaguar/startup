@@ -15,7 +15,6 @@ export function About() {
       const randomIndex = Math.floor(Math.random() * data.length);
       setEmoji(data[randomIndex].character); // Get the emoji character
     })
-    .catch((error) => console.error('Error fetching emoji:', error));
 }, []);
   return (
     <main>
