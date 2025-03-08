@@ -1,8 +1,8 @@
-const cookieParser = require('cookie-parser');
-const bcrypt = require('bcryptjs');
 const express = require('express');
-const uuid = require('uuid');
 const app = express();
+const cookieParser = require('cookie-parser');
+const uuid = require('uuid');
+const bcrypt = require('bcryptjs');
 
 const authCookieName = 'token';
 
@@ -14,6 +14,10 @@ const port = process.argv.length > 2 ? process.argv[2] : 4000;
 app.use(express.static('public'));
 app.use(express.json());
 app.use(cookieParser());
+
+app.get('/', (req, res) => {
+  res.send('Server is running!');
+});
 
 
 var apiRouter = express.Router();
@@ -51,15 +55,6 @@ apiRouter.delete('/auth/logout', async (req, res) => {
   res.clearCookie(authCookieName);
   res.status(204).end();
 });
-
-const verifyAuth = async (req, res, next) => {
-  const user = await findUser('token', req.cookies[authCookieName]);
-  if (user) {
-    next();
-  } else {
-    res.status(401).send({ msg: 'Unauthorized' });
-  }
-};
 
 async function createUser(email, password) {
   const passwordHash = await bcrypt.hash(password, 10);

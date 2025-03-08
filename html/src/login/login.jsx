@@ -2,21 +2,39 @@ import React, { useState } from 'react';
 import { useNavigate } from "react-router-dom";
 
 export function Login() {
-    const [username, setUsername] = useState(localStorage.getItem("username") || "");
-    const [password, setPassword] = useState("");
+    const [username, setUsername] = useState('')
+    const [password, setPassword] = useState('');
     const isLoggedIn = localStorage.getItem("isAuthenticated") === "true";
     const navigate = useNavigate();
 
-    const Login = (e) => {
-        localStorage.setItem("isAuthenticated", "true");
-        localStorage.setItem("username", username);
-        localStorage.setItem("password", password);
-        window.location.reload();
-    };
+    async function Login() {
+        loginOrCreate(`/api/auth/login`);
+      }
+    
+      async function Create() {
+        loginOrCreate(`/api/auth/create`);
+      }
+
+    async function loginOrCreate(endpoint) {
+        const response = await fetch(endpoint, {
+          method: 'post',
+          body: JSON.stringify({ email: username, password: password }),
+          headers: {
+            'Content-type': 'application/json; charset=UTF-8',
+          },
+        });
+        if (response?.status === 200) {
+          localStorage.setItem('userName', username);
+          localStorage.setItem("isAuthenticated", "true");
+        } else {
+          const body = await response.json();
+          setDisplayError(`⚠ Error: ${body.msg}`);
+        }
+      }
 
     const Logout = () => {
         localStorage.removeItem("isAuthenticated");
-        localStorage.removeItem("username");
+        localStorage.removeItem("userName");
         localStorage.removeItem("password");
         localStorage.removeItem("messages");
         navigate('/');
@@ -53,7 +71,7 @@ export function Login() {
                             onChange={(e) => setPassword(e.target.value)} />
                     </div>
                     <button className="btn btn-secondary" onClick={Login} disabled={!username || !password}>Login</button>
-                    <button className="btn btn-primary" onClick={Login} disabled={!username || !password}>Create</button>
+                    <button className="btn btn-primary" onClick={Create} disabled={!username || !password}>Create</button>
                 </form>
             </div>
             <br />
