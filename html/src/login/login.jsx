@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 
 export function Login() {
     const [username, setUsername] = useState('')
     const [password, setPassword] = useState('');
     const [isAuthenticated, setIsAuthenticated] = useState(localStorage.getItem("isAuthenticated") === "true");
-    const navigate = useNavigate();
 
     useEffect(() => {
         setIsAuthenticated(localStorage.getItem("isAuthenticated") === "true");
@@ -38,13 +37,18 @@ export function Login() {
         }
       }
 
-    const Logout = () => {
-        localStorage.removeItem("isAuthenticated");
-        localStorage.removeItem("userName");
-        localStorage.removeItem("password");
-        localStorage.removeItem("messages");
-        setIsAuthenticated(false);
-        window.location.reload();
+    function Logout () {
+        fetch(`/api/auth/logout`, {
+            method: 'delete',
+          })
+            .catch(() => {
+            })
+            .finally(() => {
+                localStorage.removeItem("isAuthenticated");
+                localStorage.removeItem("userName");
+                setIsAuthenticated(false);
+                window.location.reload();
+            });
     };
 
     if (isAuthenticated) {
@@ -63,7 +67,7 @@ export function Login() {
         <main>
             <div>
                 <h1><b>Welcome to JagarChat!</b></h1>
-                <form method="get" action="/" className="loginForm">
+                <form className="loginForm">
                     <div className="input-group">
                         <span className="input-group-text">👤</span>
                         <input className="form-control" type="text"
