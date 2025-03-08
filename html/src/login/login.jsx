@@ -31,6 +31,7 @@ export function Login() {
           localStorage.setItem('userName', username);
           localStorage.setItem("isAuthenticated", "true");
           setIsAuthenticated(true);
+          window.location.reload();
         } else {
           const body = await response.json();
           alert(`Error: ${body.msg}`);
