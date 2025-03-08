@@ -75,8 +75,8 @@ export function Login() {
                             placeholder="Enter Password" value={password}
                             onChange={(e) => setPassword(e.target.value)} />
                     </div>
-                    <button className="btn btn-secondary" onClick={Login} disabled={!username || !password}>Login</button>
-                    <button className="btn btn-primary" onClick={Create} disabled={!username || !password}>Create</button>
+                    <button type="button" className="btn btn-secondary" onClick={Login} disabled={!username || !password}>Login</button>
+                    <button type="button" className="btn btn-primary" onClick={Create} disabled={!username || !password}>Create</button>
                 </form>
             </div>
             <br />
