@@ -1,11 +1,15 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate } from "react-router-dom";
 
 export function Login() {
     const [username, setUsername] = useState('')
     const [password, setPassword] = useState('');
-    const isLoggedIn = localStorage.getItem("isAuthenticated") === "true";
+    const [isAuthenticated, setIsAuthenticated] = useState(localStorage.getItem("isAuthenticated") === "true");
     const navigate = useNavigate();
+
+    useEffect(() => {
+        setIsAuthenticated(localStorage.getItem("isAuthenticated") === "true");
+    }, []);
 
     async function Login() {
         loginOrCreate(`/api/auth/login`);
@@ -26,9 +30,10 @@ export function Login() {
         if (response?.status === 200) {
           localStorage.setItem('userName', username);
           localStorage.setItem("isAuthenticated", "true");
+          setIsAuthenticated(true);
         } else {
           const body = await response.json();
-          setDisplayError(`⚠ Error: ${body.msg}`);
+          alert(`Error: ${body.msg}`);
         }
       }
 
@@ -37,15 +42,15 @@ export function Login() {
         localStorage.removeItem("userName");
         localStorage.removeItem("password");
         localStorage.removeItem("messages");
-        navigate('/');
+        setIsAuthenticated(false);
         window.location.reload();
     };
 
-    if (isLoggedIn) {
+    if (isAuthenticated) {
         return (
             <main>
                 <h1><b>Welcome to JagarChat!</b></h1>
-                <p>Logged in as <b>{username}</b></p>
+                <p>Logged in as <b>{localStorage.getItem('userName')}</b></p>
                 <div>
                     <button className="btn btn-danger" onClick={Logout}>Logout</button>
                 </div>
