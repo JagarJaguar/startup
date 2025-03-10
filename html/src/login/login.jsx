@@ -7,19 +7,8 @@ export function Login() {
     const [isAuthenticated, setIsAuthenticated] = useState(localStorage.getItem("isAuthenticated") === "true");
 
     useEffect(() => {
-      async function verifyAuth() {
-          const response = await fetch('/api/auth/verify', { 
-              method: 'GET', 
-              credentials: 'include' // Ensures cookies are sent
-          });
-          if (response.ok) {
-              setIsAuthenticated(true);
-          } else {
-              setIsAuthenticated(false);
-          }
-      }
-      verifyAuth();
-  }, []);
+        setIsAuthenticated(localStorage.getItem("isAuthenticated") === "true");
+    }, []);
 
     async function Login() {
         loginOrCreate(`/api/auth/login`);
@@ -48,17 +37,19 @@ export function Login() {
         }
       }
 
-      function Logout() {
+    function Logout () {
         fetch(`/api/auth/logout`, {
-            method: 'DELETE',
-            credentials: 'include' // Include cookies so the server clears them
-        })
-        .finally(() => {
-            setIsAuthenticated(false);
-            localStorage.removeItem("userName");
-            window.location.reload();
-        });
-    }
+            method: 'delete',
+          })
+            .catch(() => {
+            })
+            .finally(() => {
+                localStorage.removeItem("isAuthenticated");
+                localStorage.removeItem("userName");
+                setIsAuthenticated(false);
+                window.location.reload();
+            });
+    };
 
     if (isAuthenticated) {
         return (

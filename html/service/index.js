@@ -65,15 +65,6 @@ const verifyAuth = async (req, res, next) => {
   }
 };
 
-apiRouter.get('/auth/verify', (req, res) => {
-  const user = users.find(u => u.token === req.cookies[authCookieName]);
-  if (user) {
-    res.send({ email: user.email });
-  } else {
-    res.status(401).send({ msg: 'Unauthorized' });
-  }
-});
-
 apiRouter.get('/messages', verifyAuth, (_req, res) => {
   res.send(messages); 
 });
