@@ -1,16 +1,23 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import './chat.css';
 
 export function Chat() {
     const username = localStorage.getItem("userName");
     const [message, setMessage] = useState('');
     const [messages, setMessages] = useState([]);
+    const bottomOfText = useRef(null);
 
     useEffect(() => {
         fetch('/api/messages')
             .then((response) => response.json())
             .then((messages) => setMessages(messages));
     }, []);
+
+    useEffect(() => {
+        if (bottomOfText.current) {
+            bottomOfText.current.scrollTop = bottomOfText.current.scrollHeight;
+        }
+    }, [messages])
 
     const sendMessages = async () => {
         const trimmedMessage = message.trim();
@@ -35,7 +42,9 @@ export function Chat() {
                 <label htmlFor="textarea"><b>Logged in as: </b> {username}</label>
                 <br />
                 <textarea id="textarea" name="varTextarea" className="form-control"
-                    rows="14" cols="60" readOnly value={messages.map(message => `${message.email}: ${message.text}`).join("\n")}>
+                    rows="14" cols="60" 
+                    ref={bottomOfText} 
+                    readOnly value={messages.map(message => `${message.email}: ${message.text}`).join("\n")}>
                 </textarea>
                 <br />
 
