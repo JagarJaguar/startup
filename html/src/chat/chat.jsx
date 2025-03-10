@@ -8,9 +8,14 @@ export function Chat() {
     const bottomOfText = useRef(null);
 
     useEffect(() => {
-        fetch('/api/messages')
-            .then((response) => response.json())
-            .then((messages) => setMessages(messages));
+        const fetchMessages = () => {
+            fetch('/api/messages')
+                .then((response) => response.json())
+                .then((messages) => setMessages(messages));
+        };
+        fetchMessages();
+        const refresh = setInterval(fetchMessages, 1000);
+        return () => clearInterval(refresh);
     }, []);
 
     useEffect(() => {
