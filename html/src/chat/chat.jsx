@@ -9,7 +9,7 @@ export function Chat() {
 
     useEffect(() => {
         const fetchMessages = () => {
-            fetch('/api/messages')
+            fetch('/api/messages', {credentials: 'include'})
                 .then((response) => response.json())
                 .then((messages) => setMessages(messages));
         };
