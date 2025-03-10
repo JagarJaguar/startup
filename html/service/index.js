@@ -11,16 +11,16 @@ let messages = [];
 
 const port = process.argv.length > 2 ? process.argv[2] : 4000;
 
-app.use(express.static('public'));
 app.use(express.json());
 app.use(cookieParser());
-
-app.get('/', (req, res) => {
-  res.send('Server is running!');
-});
+app.use(express.static('public'));
 
 var apiRouter = express.Router();
 app.use(`/api`, apiRouter);
+
+app.use((_req, res) => {
+  res.sendFile('index.html', { root: 'public' });
+});
 
 apiRouter.post('/auth/create', async (req, res) => {
   if (await findUser('email', req.body.email)) {
