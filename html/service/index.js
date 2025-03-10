@@ -7,7 +7,7 @@ const bcrypt = require('bcryptjs');
 const authCookieName = 'token';
 
 let users = [];
-let messages = {};
+let messages = [];
 
 const port = process.argv.length > 2 ? process.argv[2] : 4000;
 

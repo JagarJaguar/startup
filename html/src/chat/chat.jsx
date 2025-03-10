@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './chat.css';
 
 export function Chat() {
-    const username = localStorage.getItem("username");
+    const username = localStorage.getItem("userName");
     const [message, setMessage] = useState('');
     const [messages, setMessages] = useState([]);
 
@@ -26,7 +26,7 @@ export function Chat() {
         <main className="chat-page">
             <div className="chat-container">
                 <h2>Start Chatting Now!</h2>
-                <label htmlFor="textarea"><b>Logged in as: </b> {localStorage.getItem('userName')}</label>
+                <label htmlFor="textarea"><b>Logged in as: </b> {username}</label>
                 <br />
                 <textarea id="textarea" name="varTextarea" className="form-control"
                     rows="14" cols="60" readOnly value={messages.join("\n")}>
