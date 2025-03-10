@@ -7,7 +7,7 @@ export function Chat() {
     const [messages, setMessages] = useState([]);
 
     useEffect(() => {
-        fetch('/api/messages', {credentials: 'include'})
+        fetch('/api/messages', { credentials: 'include' })
         .then((response) => response.json())
         .then((messages) => setMessages(messages));
     }, []); 
@@ -33,7 +33,7 @@ export function Chat() {
                 <label htmlFor="textarea"><b>Logged in as: </b> {username}</label>
                 <br />
                 <textarea id="textarea" name="varTextarea" className="form-control"
-                    rows="14" cols="60" readOnly value={messages.join("\n")}>
+                    rows="14" cols="60" readOnly value={messages.map(message => `${message.email}: ${message.text}`).join("\n")}>
                 </textarea>
                 <br />
 
