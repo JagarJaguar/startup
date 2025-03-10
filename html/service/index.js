@@ -65,6 +65,19 @@ const verifyAuth = async (req, res, next) => {
   }
 };
 
+apiRouter.post('/message', verifyAuth, (req, res) => {
+  const { email, text } = req.body;
+  if (!text.trim()) {
+    return res.status(401).send({ msg: 'Message cannot be empty!' });
+  }
+
+  const newMessage = { email, text };
+  messages.push(newMessage); 
+
+  res.send(newMessage); 
+});
+
+
 async function createUser(email, password) {
   const passwordHash = await bcrypt.hash(password, 10);
 
