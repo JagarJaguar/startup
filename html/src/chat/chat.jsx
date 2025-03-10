@@ -8,17 +8,17 @@ export function Chat() {
 
     useEffect(() => {
         fetch('/api/messages')
-        .then((response) => response.json())
-        .then((messages) => setMessages(messages));
-    }, []); 
+            .then((response) => response.json())
+            .then((messages) => setMessages(messages));
+    }, []);
 
     const sendMessages = async () => {
         const trimmedMessage = message.trim();
         const response = await fetch('/api/message', {
             method: 'POST',
-            headers: { 'Content-type': 'application/json'},
+            headers: { 'Content-type': 'application/json' },
             credentials: 'include',
-            body: JSON.stringify({email: username, text: trimmedMessage }),
+            body: JSON.stringify({ email: username, text: trimmedMessage }),
         });
 
         const newMessage = await response.json();

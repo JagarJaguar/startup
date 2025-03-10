@@ -11,7 +11,7 @@ export default function App() {
 
     useEffect(() => {
         async function verifyAuth() {
-            const response = await fetch('/api/messages', { 
+            const response = await fetch('/api/messages', {
                 method: 'GET'
             });
             setIsLoggedIn(response.ok);

@@ -66,7 +66,7 @@ const verifyAuth = async (req, res, next) => {
 };
 
 apiRouter.get('/messages', verifyAuth, (_req, res) => {
-  res.send(messages); 
+  res.send(messages);
 });
 
 apiRouter.post('/message', verifyAuth, (req, res) => {
@@ -76,9 +76,9 @@ apiRouter.post('/message', verifyAuth, (req, res) => {
   }
 
   const newMessage = { email, text };
-  messages.push(newMessage); 
+  messages.push(newMessage);
 
-  res.send(newMessage); 
+  res.send(newMessage);
 });
 
 
