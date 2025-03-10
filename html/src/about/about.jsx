@@ -13,7 +13,7 @@ export function About() {
     .then((response) => response.json())
     .then((data) => {
       const randomIndex = Math.floor(Math.random() * data.length);
-      setEmoji(data[randomIndex].character); // Get the emoji character
+      setEmoji(data[randomIndex].character);
     })
 }, []);
   return (
