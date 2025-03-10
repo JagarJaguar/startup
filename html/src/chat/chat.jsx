@@ -21,9 +21,11 @@ export function Chat() {
             body: JSON.stringify({ email: username, text: trimmedMessage }),
         });
 
-        const newMessage = await response.json();
-        setMessages([...messages, newMessage]);
-        setMessage('');
+        if (response.ok) {
+            const newMessage = await response.json();
+            setMessages([...messages, newMessage]);
+            setMessage('');
+        }
     }
 
     return (
