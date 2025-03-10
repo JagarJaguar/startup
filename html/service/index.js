@@ -65,6 +65,10 @@ const verifyAuth = async (req, res, next) => {
   }
 };
 
+apiRouter.get('/messages', verifyAuth, (_req, res) => {
+  res.send(messages);
+});
+
 apiRouter.post('/message', verifyAuth, (req, res) => {
   const { email, text } = req.body;
   if (!text.trim()) {
