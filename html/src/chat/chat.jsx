@@ -12,15 +12,18 @@ export function Chat() {
         .then((messages) => setMessages(messages));
     }, []); 
 
-    const sendMessages = () => {
+    const sendMessages = async () => {
         const trimmedMessage = message.trim();
-        if (trimmedMessage) {
-            const newMessage = `${username}: ${message}`;
-            const updatedMessages = [...messages, newMessage];
-            setMessages(updatedMessages);
-            localStorage.setItem("messages", JSON.stringify(updatedMessages));
-            setMessage('');
-        }
+        const response = await fetch('/api/message', {
+            method: 'POST',
+            headers: { 'Content-type': 'application/json'},
+            credentials: 'include',
+            body: JSON.stringify({email: username, text: trimmedMessage }),
+        });
+
+        const newMessage = await response.json();
+        setMessages([...messages, newMessage]);
+        setMessage('');
     }
 
     return (
