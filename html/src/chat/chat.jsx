@@ -7,9 +7,10 @@ export function Chat() {
     const [messages, setMessages] = useState([]);
 
     useEffect(() => {
-        const savedMessages = JSON.parse(localStorage.getItem("messages")) || [];
-        setMessages(savedMessages);
-    }, []); // Load messages when page refresh to save them.
+        fetch('/api/messages', {credentials: 'include'})
+        .then((response) => response.json())
+        .then((messages) => setMessages(messages));
+    }, []); 
 
     const sendMessages = () => {
         const trimmedMessage = message.trim();
