@@ -7,7 +7,7 @@ export function Chat() {
     const [messages, setMessages] = useState([]);
 
     useEffect(() => {
-        fetch('/api/messages', { credentials: 'include' })
+        fetch('/api/messages')
         .then((response) => response.json())
         .then((messages) => setMessages(messages));
     }, []); 

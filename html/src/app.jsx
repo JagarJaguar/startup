@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './app.css';
 import { BrowserRouter, NavLink, Route, Routes } from 'react-router-dom';
@@ -7,7 +7,17 @@ import { Chat } from './chat/chat';
 import { About } from './about/about';
 
 export default function App() {
-    const isLoggedIn = localStorage.getItem("isAuthenticated") === "true";
+    const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+    useEffect(() => {
+        async function verifyAuth() {
+            const response = await fetch('/api/messages', { 
+                method: 'GET'
+            });
+            setIsLoggedIn(response.ok);
+        }
+        verifyAuth();
+    }, []);
 
     return (
         <BrowserRouter>
