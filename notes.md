@@ -84,3 +84,7 @@ Going to start using bulletpoints to make things easier since it is a lot to cov
 - Debug frontend/backend for service, makes a lot more sense. 
 
 ## Database Notes
+- Have to change data to an array if the data was previously using an array since it is a JSON object. General rule with most of them.
+- Database.js controls all of the backend for the database, make calls in service still to push the messages and credentials to database to be stored (essentially service still controls it all but any data is stored in the database).
+- MongoDB uses collections. Above those collections are the namespaces and then the clusters. There is the `simon` namespace and then the `jagarchat` namespace.
+- Use collections for separating as well, messages in one, users in the other.
