@@ -37,6 +37,11 @@ async function addMessage(message) {
   return messageCollection.insertOne(message);
 }
 
+async function getMessages() {
+    const found_messages = messageCollection.find().toArray();
+    return found_messages;
+}
+
 
 module.exports = {
     getUser,
@@ -44,4 +49,5 @@ module.exports = {
     addUser,
     updateUser,
     addMessage,
+    getMessages,
   };
