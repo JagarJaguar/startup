@@ -69,14 +69,14 @@ apiRouter.get('/messages', verifyAuth, async (_req, res) => {
   res.send(messages);
 });
 
-apiRouter.post('/message', verifyAuth, (req, res) => {
+apiRouter.post('/message', verifyAuth, async (req, res) => {
   const { email, text } = req.body;
   if (!text.trim()) {
     return res.status(401).send({ msg: 'Message cannot be empty!' });
   }
 
   const newMessage = { email, text };
-  messages.push(newMessage);
+  await DB.addMessage(newMessage);
 
   res.send(newMessage);
 });
