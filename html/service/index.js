@@ -7,7 +7,6 @@ const DB = require('./database.js');
 
 const authCookieName = 'token';
 
-let users = [];
 let messages = [];
 
 const port = process.argv.length > 2 ? process.argv[2] : 4000;
