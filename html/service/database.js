@@ -5,7 +5,7 @@ const url = `mongodb+srv://${config.userName}:${config.password}@${config.hostna
 const client = new MongoClient(url);
 const db = client.db('jagarchat');
 const userCollection = db.collection('user');
-const scoreCollection = db.collection('messages');
+const messageCollection = db.collection('messages');
 
 (async function testConnection() {
   try {
@@ -33,9 +33,15 @@ async function updateUser(user) {
   await userCollection.updateOne({ email: user.email }, { $set: user });
 }
 
+async function addMessage(message) {
+  return messageCollection.insertOne(message);
+}
+
+
 module.exports = {
     getUser,
     getUserByToken,
     addUser,
     updateUser,
+    addMessage,
   };
