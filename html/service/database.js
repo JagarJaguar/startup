@@ -42,7 +42,6 @@ async function getMessages() {
     return found_messages;
 }
 
-
 module.exports = {
     getUser,
     getUserByToken,

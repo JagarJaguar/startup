@@ -7,8 +7,6 @@ const DB = require('./database.js');
 
 const authCookieName = 'token';
 
-let messages = [];
-
 const port = process.argv.length > 2 ? process.argv[2] : 4000;
 
 app.use(express.json());
@@ -66,7 +64,8 @@ const verifyAuth = async (req, res, next) => {
   }
 };
 
-apiRouter.get('/messages', verifyAuth, (_req, res) => {
+apiRouter.get('/messages', verifyAuth, async (_req, res) => {
+  const messages = await DB.getMessages();
   res.send(messages);
 });
 
