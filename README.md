@@ -117,7 +117,7 @@ For this deliverable I did the following. I checked the box `[x]` and added a de
 
 - [x] **Node.js/Express HTTP service** - Express server created in `/service/index.js` that listens for connections/sends back data.
 - [x] **Static middleware for frontend** - Used `express.static('public')` to serve the frontend.
-- [x] **Calls to third party endpoints** - Call to emojihub API in for the about page. Cycles through random emojis and displays them.
+- [x] **Calls to third party endpoints** - Call to apiNinjas API in for the about page. Cycles through random face emojis and displays them.
 - [x] **Backend service endpoints** -  Implemented authentication (`/api/auth/*`), message retrieval (`/api/messages`), and message sending (`/api/message`).
 - [x] **Frontend calls service endpoints** - The frontend makes API calls for authentication and messaging. `App.jsx` calls (`/api/messages`) to check if `/chat` can be viewed from navigation since you have to be authenticated anyways.
 
