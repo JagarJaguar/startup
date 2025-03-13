@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './about.css';
-import ''
+import apiKey from './emojiapikey';
 
 
 export function About() {
