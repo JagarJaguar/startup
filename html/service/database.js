@@ -10,7 +10,7 @@ const scoreCollection = db.collection('messages');
 (async function testConnection() {
   try {
     await db.command({ ping: 1 });
-    console.log(`Connect to database`);
+    console.log(`Connected to database!`);
   } catch (ex) {
     console.log(`Unable to connect to database with ${url} because ${ex.message}`);
     process.exit(1);
@@ -32,3 +32,10 @@ async function addUser(user) {
 async function updateUser(user) {
   await userCollection.updateOne({ email: user.email }, { $set: user });
 }
+
+module.exports = {
+    getUser,
+    getUserByToken,
+    addUser,
+    updateUser,
+  };

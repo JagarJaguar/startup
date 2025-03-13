@@ -16,7 +16,7 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(express.static('public'));
 
-var apiRouter = express.Router();
+const apiRouter = express.Router();
 app.use(`/api`, apiRouter);
 
 app.use((_req, res) => {
@@ -39,6 +39,7 @@ apiRouter.post('/auth/login', async (req, res) => {
   if (user) {
     if (await bcrypt.compare(req.body.password, user.password)) {
       user.token = uuid.v4();
+      await DB.updateUser
       setAuthCookie(res, user.token);
       res.send({ email: user.email });
       return;
