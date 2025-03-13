@@ -125,11 +125,11 @@ For this deliverable I did the following. I checked the box `[x]` and added a de
 
 For this deliverable I did the following. I checked the box `[x]` and added a description for things I completed.
 
-- [ ] **User registration** - I did not complete this part of the deliverable.
-- [ ] **User login and logout** - I did not complete this part of the deliverable.
-- [ ] **Stores data in MongoDB** - I did not complete this part of the deliverable.
-- [ ] **Stores credentials in MongoDB** - I did not complete this part of the deliverable.
-- [ ] **Restricts functionality based on authentication** - I did not complete this part of the deliverable.
+- [x] **User registration** - Users can create an account which is stored in MongoDB, will throw error if user already exists in database.
+- [x] **User login and logout** - Users can login to their accounts using their username and password. Will throw an error if credentials are incorrect or user does not exist.
+- [x] **Stores data in MongoDB** - User messages are stored in MongoDB.
+- [x] **Stores credentials in MongoDB** - User data is stored in MongoDB.
+- [x] **Restricts functionality based on authentication** - Users cannot access chat unless they are logged in.
 
 ## 🚀 WebSocket deliverable
 
