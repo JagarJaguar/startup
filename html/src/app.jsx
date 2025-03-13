@@ -51,7 +51,7 @@ export default function App() {
 
                     <footer className="bg-dark text-white">
                         <div className="container-fluid d-flex justify-content-between align-items-center">
-                            <span className="text-reset">Author Name(s)</span>
+                            <span className="text-reset">Ashton Roma</span>
                             <br />
                             <a className="text-reset" href="https://github.com/JagarJaguar/startup">
                                 GitHub
