@@ -4,8 +4,7 @@ import './about.css';
 
 export function About() {
   const [imageUrl, setImageUrl] = useState('data:image/gif;base64,R0lGODlhAQABAIAAAAUEBAAAACwAAAAAAQABAAACAkQBADs=');
-  const [randEmoji, setEmoji] = useState('...');
-  const apiKey = 'HUN8WzOMIutLS61FIprb0A==rmEbNfxMnipiAlnY'; 
+  const [randEmoji, setEmoji] = useState('...'); 
 
   useEffect(() => {
     setImageUrl('about_image.jpg');
