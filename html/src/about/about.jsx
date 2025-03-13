@@ -18,8 +18,6 @@ export function About() {
         if (data.length > 0) {
           const randomIndex = Math.floor(Math.random() * data.length);
           setEmoji(data[randomIndex].character);
-        } else {
-          throw new Error("No emojis found");
         }
       })
 }, []);
