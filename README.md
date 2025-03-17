@@ -129,7 +129,7 @@ For this deliverable I did the following. I checked the box `[x]` and added a de
 - [x] **User login and logout** - Users can login to their accounts using their username and password. Will throw an error if credentials are incorrect or user does not exist.
 - [x] **Stores data in MongoDB** - User messages are stored in MongoDB.
 - [x] **Stores credentials in MongoDB** - User data is stored in MongoDB.
-- [x] **Restricts functionality based on authentication** - Users cannot access chat unless they are logged in.
+- [x] **Restricts functionality based on authentication** - Users cannot access chat unless they are logged in. The `verifyAuth` middleware prevents unauthenticated users from accessing `/messages` or `/message`.
 
 ## 🚀 WebSocket deliverable
 
