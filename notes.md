@@ -90,3 +90,5 @@ Going to start using bulletpoints to make things easier since it is a lot to cov
 - Use collections for separating as well, messages in one, users in the other.
 
 ## Websocket Notes
+- Backend connects frontend through the websocket connection code.
+- Live end to end connection between each person.
