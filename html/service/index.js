@@ -4,6 +4,7 @@ const cookieParser = require('cookie-parser');
 const uuid = require('uuid');
 const bcrypt = require('bcryptjs');
 const DB = require('./database.js');
+const { chatProxy } = require('./chatProxy.js');
 
 const authCookieName = 'token';
 
@@ -113,6 +114,8 @@ function setAuthCookie(res, authToken) {
   });
 }
 
-app.listen(port, () => {
+const httpService = app.listen(port, () => {
   console.log(`Listening on port ${port}`);
 });
+
+chatProxy(httpService);

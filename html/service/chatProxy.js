@@ -1,7 +1,7 @@
 const { WebSocketServer } = require('ws');
 const uuid = require('uuid');
 
-function peerProxy(httpServer) {
+function chatProxy(httpServer) {
   // Create a websocket object
   const wss = new WebSocketServer({ noServer: true });
 
@@ -57,4 +57,4 @@ function peerProxy(httpServer) {
   }, 10000);
 }
 
-module.exports = { peerProxy };
+module.exports = { chatProxy };
