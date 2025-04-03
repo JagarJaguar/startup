@@ -93,3 +93,4 @@ Going to start using bulletpoints to make things easier since it is a lot to cov
 - Backend connects frontend through the websocket connection code.
 - Live end to end connection between each person.
 - Turns out when you are using a database to store stuff it still needs to get those messages somehow as well as send them so it isn't perfect in terms of that, but websocket can still be utilized.
+- chatProxy.js is pretty messy and looks like it was hacked together (it was), maybe go back and clean it up a bit and make it look more like the examples given.
