@@ -5,6 +5,7 @@ export function Chat() {
     const username = localStorage.getItem("userName");
     const [message, setMessage] = useState('');
     const [messages, setMessages] = useState([]);
+    const [isConnected, setIsConnected] = useState(false);
     const bottomOfText = useRef(null);
     const ws = useRef(null);
 
@@ -19,6 +20,7 @@ export function Chat() {
         ws.current = new WebSocket(`${protocol}://${window.location.host}/ws`);
 
         ws.current.onopen = () => {
+            setIsConnected(true);
             fetchMessages();
         };
 
@@ -28,6 +30,10 @@ export function Chat() {
                 setMessages((prevMessages) => [...prevMessages, message.data]);
             }
         };
+
+        ws.current.onclose = () => {
+            setIsConnected(false);
+          };
 
         return () => {
             if (ws.current) {
@@ -64,7 +70,7 @@ export function Chat() {
         <main className="chat-page">
             <div className="chat-container">
                 <h2>Start Chatting Now!</h2>
-                <label htmlFor="textarea"><b>Logged in as: </b> {username}</label>
+                <label htmlFor="textarea"><b>Logged in as: </b> {username} {isConnected ? ' | (Connected)' : ' | (Disconnected)'} </label>
                 <br />
                 <textarea id="textarea" name="varTextarea" className="form-control"
                     rows="14" cols="60"
