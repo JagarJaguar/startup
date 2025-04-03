@@ -54,8 +54,11 @@ export function Chat() {
         });
 
         if (response.ok) {
-            fetchMessages();
-
+            const savedMessage = await response.json();
+            if (ws.current && ws.current.readyState === 1) { 
+                ws.current.send(JSON.stringify(savedMessage));
+            }
+            
             setMessage('');
         }
     };
