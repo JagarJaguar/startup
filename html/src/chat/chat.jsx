@@ -9,7 +9,7 @@ export function Chat() {
     const ws = useRef(null);
 
     const fetchMessages = useCallback(() => {
-        fetch('/api/messages', {credentials: 'include'})
+        fetch('/api/messages', { credentials: 'include' })
             .then((response) => response.json())
             .then((messages) => setMessages(messages));
     }, []);
@@ -17,46 +17,42 @@ export function Chat() {
     useEffect(() => {
         const protocol = window.location.protocol === 'http:' ? 'ws' : 'wss';
         ws.current = new WebSocket(`${protocol}://${window.location.host}/ws`);
-    
+
         ws.current.onopen = () => {
             fetchMessages();
         };
-    
+
         ws.current.onmessage = (event) => {
-            fetchMessages();
+            const message = JSON.parse(event.data);
+            if (message.type === 'message_received') {
+                setMessages((prevMessages) => [...prevMessages, message.data]);
+            }
         };
-    
-        const refresh = setInterval(fetchMessages, 1000);
-    
+
         return () => {
-            clearInterval(refresh);
             if (ws.current) {
                 ws.current.close();
             }
         };
     }, [fetchMessages]);
-    
+
     const sendMessages = async () => {
         const trimmedMessage = message.trim();
         if (!trimmedMessage) return;
-    
-            const response = await fetch('/api/message', {
-                method: 'POST',
-                headers: { 'Content-type': 'application/json' },
-                credentials: 'include',
-                body: JSON.stringify({ email: username, text: trimmedMessage }),
-            });
-    
-            if (response.ok) {
-                fetchMessages();
-    
-                if (ws.current && ws.current.readyState === WebSocket.OPEN) {
-                    ws.current.send(JSON.stringify({ type: 'message_sent' }));
-                }
-    
-                setMessage('');
-            }
-    }
+
+        const response = await fetch('/api/message', {
+            method: 'POST',
+            headers: { 'Content-type': 'application/json' },
+            credentials: 'include',
+            body: JSON.stringify({ email: username, text: trimmedMessage }),
+        });
+
+        if (response.ok) {
+            fetchMessages();
+
+            setMessage('');
+        }
+    };
 
     useEffect(() => {
         if (bottomOfText.current) {
