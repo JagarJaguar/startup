@@ -20,6 +20,14 @@ export function Chat() {
     }, []);
 
     useEffect(() => {
+        ws.current = new WebSocket('ws://localhost:4000/ws');
+        ws.current.onopen = () => {
+            console.log('WebSocket connection established! Chat should work.');
+        };
+
+    });
+
+    useEffect(() => {
         if (bottomOfText.current) {
             bottomOfText.current.scrollTop = bottomOfText.current.scrollHeight;
         }
