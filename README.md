@@ -135,8 +135,8 @@ For this deliverable I did the following. I checked the box `[x]` and added a de
 
 For this deliverable I did the following. I checked the box `[x]` and added a description for things I completed.
 
-- [ ] **Backend listens for WebSocket connection** - I did not complete this part of the deliverable.
-- [ ] **Frontend makes WebSocket connection** - I did not complete this part of the deliverable.
-- [ ] **Data sent over WebSocket connection** - I did not complete this part of the deliverable.
-- [ ] **WebSocket data displayed** - I did not complete this part of the deliverable.
-- [ ] **Application is fully functional** - I did not complete this part of the deliverable.
+- [x] **Backend listens for WebSocket connection** - `chatProxy.js` Creates a WebSocketServer that listens on the /ws path, puts messages in array for live message display.
+- [x] **Frontend makes WebSocket connection** - `chat.jsx` makes WebSocket connection with backend. (verified with `(Connected)` or `(Disconnected)`).
+- [x] **Data sent over WebSocket connection** - When user sends message it is send through service to store in the database, and then displayed for other people connected to the chat live.
+- [x] **WebSocket data displayed** - When someone gets a message the data is displayed and the messages are updated, automatically refreshes chat with new messages that have come in.
+- [x] **Application is fully functional** - Application is fully functioning as expected. Only thing that ended up changing was the EmojiAPI (EmojiHub to API Ninjas API for reliability).
