@@ -59,6 +59,7 @@ export function Chat() {
                 ws.current.send(JSON.stringify(savedMessage));
             }
             
+            setMessages((prevMessages) => [...prevMessages, savedMessage]);
             setMessage('');
         }
     };
