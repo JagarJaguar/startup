@@ -6,6 +6,7 @@ export function Chat() {
     const [message, setMessage] = useState('');
     const [messages, setMessages] = useState([]);
     const bottomOfText = useRef(null);
+    const ws = useRef(null);
 
     useEffect(() => {
         const fetchMessages = () => {

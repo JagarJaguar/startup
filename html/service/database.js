@@ -38,8 +38,7 @@ async function addMessage(message) {
 }
 
 async function getMessages() {
-    const found_messages = messageCollection.find().toArray();
-    return found_messages;
+  return await messageCollection.find().toArray();
 }
 
 module.exports = {
