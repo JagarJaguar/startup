@@ -26,7 +26,7 @@ export function Chat() {
 
         ws.current.onmessage = (event) => {
             const message = JSON.parse(event.data);
-            if (message.type === 'message_received') {
+            if (message.type === 'message_sent') {
                 setMessages((prevMessages) => [...prevMessages, message.data]);
             }
         };
