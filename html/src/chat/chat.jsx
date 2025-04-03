@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
 import './chat.css';
 
 export function Chat() {
@@ -8,30 +8,38 @@ export function Chat() {
     const bottomOfText = useRef(null);
     const ws = useRef(null);
 
-    useEffect(() => {
-        const fetchMessages = () => {
-            fetch('/api/messages', {credentials: 'include'})
-                .then((response) => response.json())
-                .then((messages) => setMessages(messages));
-        };
-        fetchMessages();
-        const refresh = setInterval(fetchMessages, 1000);
-        return () => clearInterval(refresh);
+    const fetchMessages = useCallback(() => {
+        fetch('/api/messages', {credentials: 'include'})
+            .then((response) => response.json())
+            .then((messages) => setMessages(messages));
     }, []);
 
     useEffect(() => {
-        ws.current = new WebSocket('ws://localhost:4000/ws');
+        const protocol = window.location.protocol === 'http:' ? 'ws' : 'wss';
+        ws.current = new WebSocket(`${protocol}://${window.location.host}/ws`);
         ws.current.onopen = () => {
             console.log('WebSocket connection established! Chat should work.');
         };
 
-    });
+        ws.current.onmessage = (event) => {
+            fetchMessages();
+        };
+
+        const refresh = setInterval(fetchMessages, 500);
+
+        return () => {
+            clearInterval(refresh);
+            if (ws.current) {
+                ws.current.close();
+            }
+        };
+    }, [fetchMessages]);
 
     useEffect(() => {
         if (bottomOfText.current) {
             bottomOfText.current.scrollTop = bottomOfText.current.scrollHeight;
         }
-    }, [messages])
+    }, [messages]);
 
     const sendMessages = async () => {
         const trimmedMessage = message.trim();
@@ -43,8 +51,9 @@ export function Chat() {
         });
 
         if (response.ok) {
-            const newMessage = await response.json();
-            setMessages([...messages, newMessage]);
+            if (ws.current && ws.current.readyState === WebSocket.OPEN) {
+                ws.current.send(JSON.stringify({ type: 'message_sent' }));
+            }
             setMessage('');
         }
     }
