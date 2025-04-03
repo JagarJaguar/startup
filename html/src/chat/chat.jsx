@@ -17,16 +17,17 @@ export function Chat() {
     useEffect(() => {
         const protocol = window.location.protocol === 'http:' ? 'ws' : 'wss';
         ws.current = new WebSocket(`${protocol}://${window.location.host}/ws`);
+    
         ws.current.onopen = () => {
-            console.log('WebSocket connection established! Chat should work.');
+            fetchMessages();
         };
-
+    
         ws.current.onmessage = (event) => {
             fetchMessages();
         };
-
-        const refresh = setInterval(fetchMessages, 500);
-
+    
+        const refresh = setInterval(fetchMessages, 1000);
+    
         return () => {
             clearInterval(refresh);
             if (ws.current) {
@@ -34,29 +35,34 @@ export function Chat() {
             }
         };
     }, [fetchMessages]);
+    
+    const sendMessages = async () => {
+        const trimmedMessage = message.trim();
+        if (!trimmedMessage) return;
+    
+            const response = await fetch('/api/message', {
+                method: 'POST',
+                headers: { 'Content-type': 'application/json' },
+                credentials: 'include',
+                body: JSON.stringify({ email: username, text: trimmedMessage }),
+            });
+    
+            if (response.ok) {
+                fetchMessages();
+    
+                if (ws.current && ws.current.readyState === WebSocket.OPEN) {
+                    ws.current.send(JSON.stringify({ type: 'message_sent' }));
+                }
+    
+                setMessage('');
+            }
+    }
 
     useEffect(() => {
         if (bottomOfText.current) {
             bottomOfText.current.scrollTop = bottomOfText.current.scrollHeight;
         }
     }, [messages]);
-
-    const sendMessages = async () => {
-        const trimmedMessage = message.trim();
-        const response = await fetch('/api/message', {
-            method: 'POST',
-            headers: { 'Content-type': 'application/json' },
-            credentials: 'include',
-            body: JSON.stringify({ email: username, text: trimmedMessage }),
-        });
-
-        if (response.ok) {
-            if (ws.current && ws.current.readyState === WebSocket.OPEN) {
-                ws.current.send(JSON.stringify({ type: 'message_sent' }));
-            }
-            setMessage('');
-        }
-    }
 
     return (
         <main className="chat-page">
